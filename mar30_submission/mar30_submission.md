@@ -58,10 +58,16 @@ For each above-knee paper, a reading matrix was prepared with:
 - prediction timing
 - evaluation metric
 - code/data link
+- detailed reading note (paper-specific)
+- reading depth marker
+- abstract evidence excerpt
 
 Artifacts:
 - Reading matrix: `data/reading_matrix.csv`
-- 4-group overlap figure: `figures/overlap_figure.png`
+- Detailed per-paper notes: `data/above_knee_detailed_notes.md`
+- 4-group literal Venn diagram + exact overlap counts: `figures/overlap_figure.png`
+
+Note: if metadata did not include an abstract for a paper, the matrix and notes mark the excerpt as “Not available in retrieved metadata.”
 
 4-group overlap groups:
 - log-text inputs
@@ -70,12 +76,12 @@ Artifacts:
 - post-failure or RCA
 
 Current above-knee snapshot (n=15):
-- Log-text group hits: `2`
+- Log-text group hits: `5`
 - LLM/generative hits: `0`
-- Early/online hits: `1`
-- Post-failure/RCA hits: `1`
+- Early/online hits: `7`
+- Post-failure/RCA hits: `8`
 
-Interpretation: highly cited CI literature in this set is dominated by flaky tests, test prioritization, and build-failure characterization; explicit LLM-centered CI methods appear newer and not yet above the citation knee.
+Interpretation: highly cited CI literature in this set is dominated by test-prioritization/optimization and post-failure diagnosis. Explicit LLM-centered CI methods remain absent from the above-knee region, supporting the claim that this area is still emerging.
 
 ## 6. Candidate Gap (Unexplored Region)
 
@@ -88,10 +94,14 @@ Three candidates were smoke-tested in the requested order:
 2. `salesforce/PyRCA`
 3. Above-knee-aligned CI repo with public code: `UT-SE-Research/iDFlakies`
 
+Additional implemented above-knee paper:
+4. Rank 12: `stilab-ets/DL-CIBuild` (paper: *Improving the prediction of continuous integration build failures using deep learning*)
+
 Results:
 - Candidate 1: host setup is blocked on Python 3.14, but full FastPC baseline reproduction succeeds in Docker (`linux/amd64`) using generated FastPC-compatible input files; the run completes and writes metric-level + combined ranking outputs.
 - Candidate 2: local host install is blocked on Python 3.14, but full reproduction succeeds in Docker using Python 3.10 + OpenJDK + `numpy<2`; the official application example (`tests/applications/example/run_rca.py`) runs end-to-end and produces model artifacts plus ranked root-cause output.
 - Candidate 3: fully implemented locally. The iDFlakies Maven plugin was built and executed end-to-end on a runnable Maven demo project; detection succeeded and produced `.dtfixingtools` outputs with one identified order-dependent flaky test (`demo.ODFlakeTest.polluted`).
+- Candidate 4: DL-CIBuild was executed in Docker (`tensorflow/tensorflow:2.16.1`) on `cloudify.csv` (online fold 0) using repo default LSTM settings, producing a saved baseline output (`test AUC=0.8843`, `accuracy=0.8885`, `F1=0.8694`).
 
 Artifacts:
 - Smoke matrix: `reproduction/smoke_test_matrix.md`
@@ -109,6 +119,9 @@ Artifacts:
 - Full run log (detector): `reproduction/logs/idflakies_detect_demo.txt`
 - Full run detector output list: `reproduction/idf-demo/.dtfixingtools/detection-results/list.txt`
 - Full run detector JSON: `reproduction/idf-demo/.dtfixingtools/detection-results/flaky-lists.json`
+- DL-CIBuild run notes: `reproduction/dl_cibuild_rank12_run.md`
+- DL-CIBuild baseline output JSON: `reproduction/dl_cibuild_rank12_output.json`
+- DL-CIBuild rerun script: `reproduction/scripts/run_dl_cibuild_rank12.sh`
 - Command logs: `reproduction/logs/*`
 
 ## 8. Next-Step Experiment Direction (Post-6.0)

@@ -21,10 +21,14 @@ import json
 import math
 import os
 import re
+import subprocess
+import sys
 import time
 from collections import Counter
 from typing import Dict, List, Tuple
 
+import matplotlib
+matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import pandas as pd
 import requests
@@ -415,6 +419,20 @@ def write_search_log(path: str, query_results: Dict[str, int]) -> None:
         f.write("\n".join(lines) + "\n")
 
 
+def run_curated_matrix_and_venn() -> pd.DataFrame:
+    """
+    Delegate reading-matrix + overlap figure generation to the curated script.
+    This prevents accidental fallback to metadata-only heuristics for above-knee papers.
+    """
+    script_path = os.path.join(SCRIPT_DIR, "curate_above_knee_matrix_and_venn.py")
+    subprocess.run([sys.executable, script_path], check=True, cwd=ROOT_DIR)
+
+    matrix_path = os.path.join(DATA_DIR, "reading_matrix.csv")
+    if not os.path.exists(matrix_path):
+        raise RuntimeError("Curated reading matrix was not generated.")
+    return pd.read_csv(matrix_path)
+
+
 def main() -> None:
     ensure_dirs()
 
@@ -453,24 +471,6 @@ def main() -> None:
     above_knee = above_knee.sort_values(by="citationCount", ascending=False)
     above_knee.insert(0, "above_knee_rank", list(range(1, len(above_knee) + 1)))
 
-    # Build reading matrix classifications.
-    matrix = above_knee.copy()
-    full_text = (matrix["title"].fillna("") + " " + matrix["abstract"].fillna("") + " " + matrix["venue"].fillna(""))
-    matrix["input_artifact"] = full_text.apply(classify_input_artifact)
-    matrix["model_family"] = full_text.apply(classify_model_family)
-    matrix["task"] = full_text.apply(classify_task)
-    matrix["prediction_timing"] = full_text.apply(classify_timing)
-    matrix["evaluation_metric"] = full_text.apply(infer_eval_metric)
-
-    # Required overlap groups.
-    matrix["group_log_text_inputs"] = matrix["input_artifact"].apply(lambda x: 1 if x == "log_text" else 0)
-    matrix["group_llm_or_generative"] = matrix["model_family"].apply(lambda x: 1 if x == "llm_or_generative" else 0)
-    matrix["group_early_or_online"] = matrix["prediction_timing"].apply(lambda x: 1 if x in {"early_or_online", "both"} else 0)
-    matrix["group_post_failure_or_rca"] = matrix["prediction_timing"].apply(
-        lambda x: 1 if x in {"post_failure_or_rca", "both"} else 0
-    )
-    matrix["code_or_data_link"] = matrix["openAccessPdf"].where(matrix["openAccessPdf"].astype(str) != "", matrix["url"])
-
     # Persist.
     raw_cols = [
         "source_query",
@@ -496,33 +496,15 @@ def main() -> None:
         "source_query",
         "relevance_score",
     ]
-    matrix_cols = [
-        "above_knee_rank",
-        "title",
-        "year",
-        "venue",
-        "citationCount",
-        "input_artifact",
-        "model_family",
-        "task",
-        "prediction_timing",
-        "evaluation_metric",
-        "code_or_data_link",
-        "group_log_text_inputs",
-        "group_llm_or_generative",
-        "group_early_or_online",
-        "group_post_failure_or_rca",
-    ]
 
     df[raw_cols].to_csv(os.path.join(DATA_DIR, "papers_raw.csv"), index=False, quoting=csv.QUOTE_MINIMAL)
     top100[top_cols].to_csv(os.path.join(DATA_DIR, "top100_papers.csv"), index=False, quoting=csv.QUOTE_MINIMAL)
     above_knee[top_cols].to_csv(os.path.join(DATA_DIR, "above_knee_set.csv"), index=False, quoting=csv.QUOTE_MINIMAL)
-    matrix[matrix_cols].to_csv(os.path.join(DATA_DIR, "reading_matrix.csv"), index=False, quoting=csv.QUOTE_MINIMAL)
 
     write_search_log(os.path.join(DATA_DIR, "search_log.md"), query_results)
 
     make_knee_plot(citations, knee_i, os.path.join(FIG_DIR, "knee_plot.png"))
-    make_overlap_figure(matrix, os.path.join(FIG_DIR, "overlap_figure.png"))
+    matrix = run_curated_matrix_and_venn()
 
     summary = {
         "generated_at": dt.datetime.now().isoformat(),
@@ -531,6 +513,11 @@ def main() -> None:
         "knee_rank": int(knee_i + 1),
         "knee_citation_threshold": int(knee_cites),
         "above_knee_rows": int(len(above_knee)),
+        "reading_matrix_mode": "manual_curated",
+        "group_log_text_inputs": int(matrix["group_log_text_inputs"].sum()),
+        "group_llm_or_generative": int(matrix["group_llm_or_generative"].sum()),
+        "group_early_or_online": int(matrix["group_early_or_online"].sum()),
+        "group_post_failure_or_rca": int(matrix["group_post_failure_or_rca"].sum()),
         "query_results": query_results,
     }
     with open(os.path.join(DATA_DIR, "knee_summary.json"), "w", encoding="utf-8") as f:

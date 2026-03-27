@@ -9,6 +9,7 @@ Core literature artifacts:
 - `data/top100_papers.csv`
 - `data/above_knee_set.csv`
 - `data/reading_matrix.csv`
+- `data/above_knee_detailed_notes.md`
 - `data/knee_summary.json`
 - `figures/knee_plot.png`
 - `figures/overlap_figure.png`
@@ -32,9 +33,14 @@ Reproduction artifacts:
 - `reproduction/work/iDFlakies/idflakies-maven-plugin/src/main/java/edu/illinois/cs/dt/tools/plugin/AbstractIDFlakiesMojo.java` (JDK-compatibility patch)
 - `reproduction/logs/*`
 
+Matrix/Venn curation script:
+- `scripts/curate_above_knee_matrix_and_venn.py`
+
 ## Regenerate literature artifacts
 
 ```bash
 source mar30_submission/.venv/bin/activate
 MPLCONFIGDIR=mar30_submission/.mpl python mar30_submission/scripts/generate_mar30_artifacts.py
 ```
+
+Note: `generate_mar30_artifacts.py` now invokes `scripts/curate_above_knee_matrix_and_venn.py` so the generated `reading_matrix.csv` remains manually curated and `overlap_figure.png` remains a literal Venn-style figure.

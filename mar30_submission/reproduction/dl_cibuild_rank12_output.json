@@ -1,0 +1,32 @@
+{
+  "paper_rank": 12,
+  "paper_title": "Improving the prediction of continuous integration build failures using deep learning",
+  "repository": "https://github.com/stilab-ets/DL-CIBuild",
+  "dataset": "cloudify.csv",
+  "validation_mode": "online_validation_folds",
+  "fold_index": 0,
+  "train_rows": 2870,
+  "test_rows": 574,
+  "tuner": "default",
+  "train_metrics": {
+    "AUC": 0.8790269827339369,
+    "accuracy": 0.8971830985915493,
+    "F1": 0.8327605956471936,
+    "validation_loss": 0.28686681389808655,
+    "time": 42.81987147798645,
+    "params": {
+      "nb_units": 64,
+      "nb_layers": 3,
+      "optimizer": "adam",
+      "time_step": 30,
+      "nb_epochs": 10,
+      "nb_batch": 64,
+      "drop_proba": 0.1
+    }
+  },
+  "test_metrics": {
+    "AUC": 0.8843333333333332,
+    "accuracy": 0.8885017421602788,
+    "F1": 0.8693877551020408
+  }
+}
