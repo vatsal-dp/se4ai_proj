@@ -1,0 +1,7 @@
+Thu Mar 26 19:48:45 EDT 2026
+python:
+Python 3.14.2
+java:
+openjdk version "21.0.5" 2024-10-15 LTS
+docker:
+Docker version 27.3.1, build ce12230

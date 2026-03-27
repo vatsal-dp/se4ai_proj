@@ -1,0 +1,7 @@
+file,dependent_test,polluter_count,cleaner_count,flaky_class
+naming/org.jboss.as.naming.WritableServiceBasedNamingStoreTestCase.testPermissions-c494a241f11c551779bc1904fa47348e-PASS-dependencies.json,org.jboss.as.naming.WritableServiceBasedNamingStoreTestCase.testPermissions,1,0,OD
+marine-api/net.sf.marineapi.ais.parser.AISMessageFactoryTest.testCreateWithTwo-64e87f61fe0dc7194d0c8be1eb266d7f-ERROR-dependencies.json,net.sf.marineapi.ais.parser.AISMessageFactoryTest.testCreateWithTwo,1,15,OD
+marine-api/net.sf.marineapi.ais.event.AbstractAISMessageListenerTest.testSequenceListenerWithIncorrectOrder-10be918b1171de27588c31d9a89823cd-ERROR-dependencies.json,net.sf.marineapi.ais.event.AbstractAISMessageListenerTest.testSequenceListenerWithIncorrectOrder,1,15,OD
+cukes-http/lv.ctco.cukes.http.facade.HttpAssertionFacadeImplTest.shouldReturnBodyWhenEnabledAndNoMax-8cbc2d89d81d400bd1c61381f60a426a-FAILURE-dependencies.json,lv.ctco.cukes.http.facade.HttpAssertionFacadeImplTest.shouldReturnBodyWhenEnabledAndNoMax,1,3,OD
+lib/com.github.kevinsawicki.http.HttpRequestTest.postWithVaragsQueryParams-b9ce25cb22a453860a16b1588b971ca1-ERROR-dependencies.json,com.github.kevinsawicki.http.HttpRequestTest.postWithVaragsQueryParams,1,1,OD
+elastic-job-lite-core/io.elasticjob.lite.internal.instance.ShutdownListenerManagerTest.assertIsShutdownAlready-f3c196681eb02fe87d6f88b4ff609ea7-ERROR-dependencies.json,io.elasticjob.lite.internal.instance.ShutdownListenerManagerTest.assertIsShutdownAlready,1,4,OD

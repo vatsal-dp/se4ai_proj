@@ -1,0 +1,15 @@
+{
+  "generated_at": "2026-03-26T19:50:37.922787",
+  "raw_rows": 375,
+  "top100_rows": 100,
+  "knee_rank": 14,
+  "knee_citation_threshold": 52,
+  "above_knee_rows": 15,
+  "query_results": {
+    "continuous integration build failure": 120,
+    "travis ci build failure": 27,
+    "continuous integration flaky tests": 91,
+    "ci/cd log analysis software": 53,
+    "continuous integration regression test selection": 120
+  }
+}

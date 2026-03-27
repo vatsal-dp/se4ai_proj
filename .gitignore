@@ -1,0 +1,9 @@
+.DS_Store
+__pycache__/
+*.pyc
+
+mar30_submission/.mpl/
+mar30_submission/reproduction/.venv/
+mar30_submission/reproduction/.m2/
+mar30_submission/reproduction/work/
+mar30_submission/reproduction/idf-demo/target/

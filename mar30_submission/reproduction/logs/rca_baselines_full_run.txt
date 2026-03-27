@@ -1,0 +1,290 @@
+Hit:1 http://deb.debian.org/debian trixie InRelease
+Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]
+Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]
+Get:4 http://deb.debian.org/debian trixie/main amd64 Packages [9671 kB]
+Get:5 http://deb.debian.org/debian trixie-updates/main amd64 Packages [5412 B]
+Get:6 http://deb.debian.org/debian-security trixie-security/main amd64 Packages [114 kB]
+Fetched 9881 kB in 2s (4667 kB/s)
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following NEW packages will be installed:
+  libgomp1
+0 upgraded, 1 newly installed, 0 to remove and 0 not upgraded.
+Need to get 137 kB of archives.
+After this operation, 377 kB of additional disk space will be used.
+Get:1 http://deb.debian.org/debian trixie/main amd64 libgomp1 amd64 14.2.0-19 [137 kB]
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC entries checked: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.40.1 /usr/local/share/perl/5.40.1 /usr/lib/x86_64-linux-gnu/perl5/5.40 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl-base /usr/lib/x86_64-linux-gnu/perl/5.40 /usr/share/perl/5.40 /usr/local/lib/site_perl) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 8, <STDIN> line 1.)
+debconf: falling back to frontend: Teletype
+debconf: unable to initialize frontend: Teletype
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Noninteractive
+Fetched 137 kB in 0s (735 kB/s)
+Selecting previously unselected package libgomp1:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 5645 files and directories currently installed.)
+Preparing to unpack .../libgomp1_14.2.0-19_amd64.deb ...
+Unpacking libgomp1:amd64 (14.2.0-19) ...
+Setting up libgomp1:amd64 (14.2.0-19) ...
+Processing triggers for libc-bin (2.41-12+deb13u2) ...
+Collecting numpy<2
+  Downloading numpy-1.26.4-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (18.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 18.2/18.2 MB 41.6 MB/s eta 0:00:00
+Collecting pandas
+  Downloading pandas-2.3.3-cp310-cp310-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (12.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.8/12.8 MB 54.7 MB/s eta 0:00:00
+Collecting scikit-learn
+  Downloading scikit_learn-1.7.2-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (9.7 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.7/9.7 MB 33.6 MB/s eta 0:00:00
+Collecting scipy
+  Downloading scipy-1.15.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (37.7 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 37.7/37.7 MB 41.5 MB/s eta 0:00:00
+Collecting networkx
+  Downloading networkx-3.4.2-py3-none-any.whl (1.7 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.7/1.7 MB 53.2 MB/s eta 0:00:00
+Collecting torch
+  Downloading torch-2.11.0-cp310-cp310-manylinux_2_28_x86_64.whl (530.6 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 530.6/530.6 MB 53.0 MB/s eta 0:00:00
+Collecting pingouin
+  Downloading pingouin-0.6.0-py3-none-any.whl (204 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 204.8/204.8 kB 40.2 MB/s eta 0:00:00
+Collecting tzdata>=2022.7
+  Downloading tzdata-2025.3-py2.py3-none-any.whl (348 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 348.5/348.5 kB 59.1 MB/s eta 0:00:00
+Collecting pytz>=2020.1
+  Downloading pytz-2026.1.post1-py2.py3-none-any.whl (510 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 510.5/510.5 kB 52.5 MB/s eta 0:00:00
+Collecting python-dateutil>=2.8.2
+  Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 39.7 MB/s eta 0:00:00
+Collecting threadpoolctl>=3.1.0
+  Downloading threadpoolctl-3.6.0-py3-none-any.whl (18 kB)
+Collecting joblib>=1.2.0
+  Downloading joblib-1.5.3-py3-none-any.whl (309 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 309.1/309.1 kB 81.5 MB/s eta 0:00:00
+Collecting typing-extensions>=4.10.0
+  Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.6/44.6 kB 215.5 MB/s eta 0:00:00
+Collecting filelock
+  Downloading filelock-3.25.2-py3-none-any.whl (26 kB)
+Collecting triton==3.6.0
+  Downloading triton-3.6.0-cp310-cp310-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (188.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 188.1/188.1 MB 46.0 MB/s eta 0:00:00
+Collecting nvidia-cudnn-cu13==9.19.0.56
+  Downloading nvidia_cudnn_cu13-9.19.0.56-py3-none-manylinux_2_27_x86_64.whl (366.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 366.1/366.1 MB 42.9 MB/s eta 0:00:00
+Collecting sympy>=1.13.3
+  Downloading sympy-1.14.0-py3-none-any.whl (6.3 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.3/6.3 MB 43.0 MB/s eta 0:00:00
+Collecting jinja2
+  Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.9/134.9 kB 224.7 MB/s eta 0:00:00
+Collecting fsspec>=0.8.5
+  Downloading fsspec-2026.2.0-py3-none-any.whl (202 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 202.5/202.5 kB 60.4 MB/s eta 0:00:00
+Collecting nvidia-nvshmem-cu13==3.4.5
+  Downloading nvidia_nvshmem_cu13-3.4.5-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (60.4 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 60.4/60.4 MB 39.1 MB/s eta 0:00:00
+Collecting cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.2
+  Downloading cuda_toolkit-13.0.2-py2.py3-none-any.whl (2.4 kB)
+Requirement already satisfied: setuptools<82 in /usr/local/lib/python3.10/site-packages (from torch) (79.0.1)
+Collecting nvidia-cusparselt-cu13==0.8.0
+  Downloading nvidia_cusparselt_cu13-0.8.0-py3-none-manylinux2014_x86_64.whl (169.9 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 169.9/169.9 MB 45.8 MB/s eta 0:00:00
+Collecting nvidia-nccl-cu13==2.28.9
+  Downloading nvidia_nccl_cu13-2.28.9-py3-none-manylinux_2_18_x86_64.whl (196.5 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 196.5/196.5 MB 56.7 MB/s eta 0:00:00
+Collecting cuda-bindings<14,>=13.0.3
+  Downloading cuda_bindings-13.2.0-cp310-cp310-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (6.3 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.3/6.3 MB 59.7 MB/s eta 0:00:00
+Collecting nvidia-cufft==12.0.0.61.*
+  Downloading nvidia_cufft-12.0.0.61-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (214.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 214.1/214.1 MB 57.0 MB/s eta 0:00:00
+Collecting nvidia-cuda-runtime==13.0.96.*
+  Downloading nvidia_cuda_runtime-13.0.96-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (2.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.2/2.2 MB 58.3 MB/s eta 0:00:00
+Collecting nvidia-cusparse==12.6.3.3.*
+  Downloading nvidia_cusparse-12.6.3.3-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (145.9 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 145.9/145.9 MB 62.7 MB/s eta 0:00:00
+Collecting nvidia-cufile==1.15.1.6.*
+  Downloading nvidia_cufile-1.15.1.6-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 60.9 MB/s eta 0:00:00
+Collecting nvidia-nvjitlink==13.0.88.*
+  Downloading nvidia_nvjitlink-13.0.88-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl (40.7 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 40.7/40.7 MB 61.4 MB/s eta 0:00:00
+Collecting nvidia-curand==10.4.0.35.*
+  Downloading nvidia_curand-10.4.0.35-py3-none-manylinux_2_27_x86_64.whl (59.5 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 59.5/59.5 MB 61.0 MB/s eta 0:00:00
+Collecting nvidia-cuda-cupti==13.0.85.*
+  Downloading nvidia_cuda_cupti-13.0.85-py3-none-manylinux_2_25_x86_64.whl (10.7 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.7/10.7 MB 61.7 MB/s eta 0:00:00
+Collecting nvidia-nvtx==13.0.85.*
+  Downloading nvidia_nvtx-13.0.85-py3-none-manylinux1_x86_64.manylinux_2_5_x86_64.whl (148 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 148.0/148.0 kB 102.4 MB/s eta 0:00:00
+Collecting nvidia-cublas==13.1.0.3.*
+  Downloading nvidia_cublas-13.1.0.3-py3-none-manylinux_2_27_x86_64.whl (423.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 423.1/423.1 MB 62.0 MB/s eta 0:00:00
+Collecting nvidia-cusolver==12.0.4.66.*
+  Downloading nvidia_cusolver-12.0.4.66-py3-none-manylinux_2_27_x86_64.whl (200.9 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 200.9/200.9 MB 62.5 MB/s eta 0:00:00
+Collecting nvidia-cuda-nvrtc==13.0.88.*
+  Downloading nvidia_cuda_nvrtc-13.0.88-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl (90.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 90.2/90.2 MB 62.0 MB/s eta 0:00:00
+Collecting tabulate
+  Downloading tabulate-0.10.0-py3-none-any.whl (39 kB)
+Collecting seaborn
+  Downloading seaborn-0.13.2-py3-none-any.whl (294 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 294.9/294.9 kB 51.3 MB/s eta 0:00:00
+Collecting matplotlib
+  Downloading matplotlib-3.10.8-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (8.7 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.7/8.7 MB 88.0 MB/s eta 0:00:00
+Collecting statsmodels>=0.14.1
+  Downloading statsmodels-0.14.6-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (10.4 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.4/10.4 MB 61.3 MB/s eta 0:00:00
+Collecting pandas_flavor
+  Downloading pandas_flavor-0.8.1-py3-none-any.whl (8.5 kB)
+Collecting cuda-pathfinder~=1.1
+  Downloading cuda_pathfinder-1.5.0-py3-none-any.whl (49 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 49.7/49.7 kB 43.4 MB/s eta 0:00:00
+Collecting six>=1.5
+  Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+Collecting patsy>=0.5.6
+  Downloading patsy-1.0.2-py2.py3-none-any.whl (233 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 233.3/233.3 kB 47.8 MB/s eta 0:00:00
+Collecting packaging>=21.3
+  Downloading packaging-26.0-py3-none-any.whl (74 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 74.4/74.4 kB 58.9 MB/s eta 0:00:00
+Collecting mpmath<1.4,>=1.1.0
+  Downloading mpmath-1.3.0-py3-none-any.whl (536 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 536.2/536.2 kB 73.4 MB/s eta 0:00:00
+Collecting MarkupSafe>=2.0
+  Downloading markupsafe-3.0.3-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (20 kB)
+Collecting cycler>=0.10
+  Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
+Collecting contourpy>=1.0.1
+  Downloading contourpy-1.3.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (325 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 325.0/325.0 kB 32.8 MB/s eta 0:00:00
+Collecting kiwisolver>=1.3.1
+  Downloading kiwisolver-1.5.0-cp310-cp310-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (1.6 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.6/1.6 MB 55.0 MB/s eta 0:00:00
+Collecting pillow>=8
+  Downloading pillow-12.1.1-cp310-cp310-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.0 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.0/7.0 MB 48.6 MB/s eta 0:00:00
+Collecting pyparsing>=3
+  Downloading pyparsing-3.3.2-py3-none-any.whl (122 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 122.8/122.8 kB 27.2 MB/s eta 0:00:00
+Collecting fonttools>=4.22.0
+  Downloading fonttools-4.62.1-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (4.9 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.9/4.9 MB 46.5 MB/s eta 0:00:00
+Collecting xarray
+  Downloading xarray-2025.6.1-py3-none-any.whl (1.3 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 50.4 MB/s eta 0:00:00
+Installing collected packages: pytz, nvidia-cusparselt-cu13, mpmath, cuda-toolkit, tzdata, typing-extensions, triton, threadpoolctl, tabulate, sympy, six, pyparsing, pillow, packaging, nvidia-nvtx, nvidia-nvshmem-cu13, nvidia-nvjitlink, nvidia-nccl-cu13, nvidia-curand, nvidia-cufile, nvidia-cuda-runtime, nvidia-cuda-nvrtc, nvidia-cuda-cupti, nvidia-cublas, numpy, networkx, MarkupSafe, kiwisolver, joblib, fsspec, fonttools, filelock, cycler, cuda-pathfinder, scipy, python-dateutil, patsy, nvidia-cusparse, nvidia-cufft, nvidia-cudnn-cu13, jinja2, cuda-bindings, contourpy, scikit-learn, pandas, nvidia-cusolver, matplotlib, xarray, statsmodels, seaborn, torch, pandas_flavor, pingouin
+Successfully installed MarkupSafe-3.0.3 contourpy-1.3.2 cuda-bindings-13.2.0 cuda-pathfinder-1.5.0 cuda-toolkit-13.0.2 cycler-0.12.1 filelock-3.25.2 fonttools-4.62.1 fsspec-2026.2.0 jinja2-3.1.6 joblib-1.5.3 kiwisolver-1.5.0 matplotlib-3.10.8 mpmath-1.3.0 networkx-3.4.2 numpy-1.26.4 nvidia-cublas-13.1.0.3 nvidia-cuda-cupti-13.0.85 nvidia-cuda-nvrtc-13.0.88 nvidia-cuda-runtime-13.0.96 nvidia-cudnn-cu13-9.19.0.56 nvidia-cufft-12.0.0.61 nvidia-cufile-1.15.1.6 nvidia-curand-10.4.0.35 nvidia-cusolver-12.0.4.66 nvidia-cusparse-12.6.3.3 nvidia-cusparselt-cu13-0.8.0 nvidia-nccl-cu13-2.28.9 nvidia-nvjitlink-13.0.88 nvidia-nvshmem-cu13-3.4.5 nvidia-nvtx-13.0.85 packaging-26.0 pandas-2.3.3 pandas_flavor-0.8.1 patsy-1.0.2 pillow-12.1.1 pingouin-0.6.0 pyparsing-3.3.2 python-dateutil-2.9.0.post0 pytz-2026.1.post1 scikit-learn-1.7.2 scipy-1.15.3 seaborn-0.13.2 six-1.17.0 statsmodels-0.14.6 sympy-1.14.0 tabulate-0.10.0 threadpoolctl-3.6.0 torch-2.11.0 triton-3.6.0 typing-extensions-4.15.0 tzdata-2025.3 xarray-2025.6.1
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+
+[notice] A new release of pip is available: 23.0.1 -> 26.0.1
+[notice] To update, run: pip install --upgrade pip
+Detectin individual causal done for metric: cpu_usage
+Detectin individual causal done for metric: memory_usage
+Detectin individual causal done for metric: rate_transmitted_packets
+Detectin individual causal done for metric: rate_received_packets
+Detectin individual causal done for metric: received_bandwidth
+Detectin individual causal done for metric: transmit_bandwidth
+Metric prioritization done!
+Prioritized metric order with learned weights:
+1: cpu_usage,0.0
+2: memory_usage,0.0
+3: rate_transmitted_packets,0.0
+4: rate_received_packets,0.0
+5: received_bandwidth,0.0
+6: transmit_bandwidth,0.0
+Causal graph generation are running in the prioritized order!
+Generating causal graph for metric: transmit_bandwidth
+==================> Performing round 3 .....
+==================> Performing round 2 .....
+==================> Performing round 1 .....
+==================> Performing round 0 .....
+Total running time: 0.045610666275024414
+Edges are: [(0, 1), (1, 0), (1, 3), (2, 4), (3, 1), (4, 2)]Generating Causal Graph Done!
+Ranking for metric transmit_bandwidth:
+1: ratings-v1 0.0422
+2: reviews-v3 0.0092
+3: details-v1 0.0083
+4: productpage-v1 0.0077
+Pod root cause detection done for metric: transmit_bandwidth
+Generating causal graph for metric: received_bandwidth
+==================> Performing round 3 .....
+==================> Performing round 2 .....
+==================> Performing round 1 .....
+==================> Performing round 0 .....
+Total running time: 0.00258636474609375
+Edges are: [(0, 1), (0, 2), (1, 0), (1, 2), (2, 0), (2, 1), (3, 4), (4, 3)]Generating Causal Graph Done!
+Ranking for metric received_bandwidth:
+1: details-v1 0.8695
+2: ratings-v1 0.0
+3: reviews-v3 0.0
+4: productpage-v1 0.0
+Pod root cause detection done for metric: received_bandwidth
+Generating causal graph for metric: rate_received_packets
+==================> Performing round 3 .....
+==================> Performing round 2 .....
+==================> Performing round 1 .....
+==================> Performing round 0 .....
+Total running time: 0.003636598587036133
+Edges are: [(0, 4), (1, 2), (1, 3), (2, 1), (2, 3), (3, 1), (3, 2), (4, 0)]Generating Causal Graph Done!
+Ranking for metric rate_received_packets:
+1: productpage-v1 0.8675
+2: details-v1 0.0
+3: ratings-v1 0.0
+4: reviews-v3 0.0
+Pod root cause detection done for metric: rate_received_packets
+Generating causal graph for metric: rate_transmitted_packets
+==================> Performing round 3 .....
+==================> Performing round 2 .....
+==================> Performing round 1 .....
+==================> Performing round 0 .....
+Total running time: 0.002544403076171875
+Edges are: [(0, 2), (0, 3), (1, 4), (2, 0), (2, 3), (3, 0), (3, 2), (4, 1)]Generating Causal Graph Done!
+Ranking for metric rate_transmitted_packets:
+1: reviews-v3 0.8653
+2: details-v1 0.0
+3: ratings-v1 0.0
+4: productpage-v1 0.0
+Pod root cause detection done for metric: rate_transmitted_packets
+Generating causal graph for metric: memory_usage
+==================> Performing round 3 .....
+==================> Performing round 2 .....
+==================> Performing round 1 .....
+==================> Performing round 0 .....
+Total running time: 0.0027565956115722656
+Edges are: [(0, 1), (0, 3), (1, 0), (1, 3), (2, 4), (3, 0), (3, 1), (4, 2)]Generating Causal Graph Done!
+Ranking for metric memory_usage:
+1: ratings-v1 0.8676
+2: details-v1 0.0
+3: reviews-v3 0.0
+4: productpage-v1 0.0
+Pod root cause detection done for metric: memory_usage
+Generating causal graph for metric: cpu_usage
+==================> Performing round 3 .....
+==================> Performing round 2 .....
+==================> Performing round 1 .....
+==================> Performing round 0 .....
+Total running time: 0.002301454544067383
+Edges are: [(0, 1), (0, 2), (1, 0), (1, 2), (2, 0), (2, 1), (3, 4), (4, 3)]Generating Causal Graph Done!
+Ranking for metric cpu_usage:
+1: details-v1 0.8679
+2: ratings-v1 0.0
+3: reviews-v3 0.0
+4: productpage-v1 0.0
+Pod root cause detection done for metric: cpu_usage
+Ranking after intergrated analysis of all selected metrics
+20211203
+1: details-v1 0.0
+2: ratings-v1 0.0
+3: reviews-v3 0.0
+4: productpage-v1 0.0

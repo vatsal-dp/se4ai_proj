@@ -1,0 +1,5 @@
+cases=6
+avg_polluters_per_case=1.0
+avg_cleaners_per_case=6.333
+max_polluters=1
+max_cleaners=15

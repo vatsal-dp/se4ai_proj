@@ -1,0 +1,502 @@
+Hit:1 http://deb.debian.org/debian trixie InRelease
+Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]
+Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]
+Get:4 http://deb.debian.org/debian trixie/main arm64 Packages [9607 kB]
+Get:5 http://deb.debian.org/debian trixie-updates/main arm64 Packages [5404 B]
+Get:6 http://deb.debian.org/debian-security trixie-security/main arm64 Packages [114 kB]
+Fetched 9817 kB in 2s (5218 kB/s)
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  ca-certificates-java java-common libjpeg62-turbo liblcms2-2 libnspr4 libnss3
+  libpcsclite1
+Suggested packages:
+  default-jre liblcms2-utils pcscd libnss-mdns fonts-dejavu-extra
+  fonts-ipafont-gothic fonts-ipafont-mincho fonts-wqy-microhei
+  | fonts-wqy-zenhei fonts-indic
+Recommended packages:
+  libcups2t64 libfontconfig1 libfreetype6 libharfbuzz0b libasound2t64
+The following NEW packages will be installed:
+  ca-certificates-java java-common libjpeg62-turbo liblcms2-2 libnspr4 libnss3
+  libpcsclite1 openjdk-21-jre-headless
+0 upgraded, 8 newly installed, 0 to remove and 0 not upgraded.
+Need to get 42.5 MB of archives.
+After this operation, 210 MB of additional disk space will be used.
+Get:1 http://deb.debian.org/debian trixie/main arm64 ca-certificates-java all 20240118 [11.6 kB]
+Get:2 http://deb.debian.org/debian trixie/main arm64 java-common all 0.76 [6776 B]
+Get:3 http://deb.debian.org/debian trixie/main arm64 libjpeg62-turbo arm64 1:2.1.5-4 [173 kB]
+Get:4 http://deb.debian.org/debian trixie/main arm64 liblcms2-2 arm64 2.16-2 [151 kB]
+Get:5 http://deb.debian.org/debian trixie/main arm64 libnspr4 arm64 2:4.36-1 [102 kB]
+Get:6 http://deb.debian.org/debian trixie/main arm64 libnss3 arm64 2:3.110-1+deb13u1 [1292 kB]
+Get:7 http://deb.debian.org/debian trixie/main arm64 libpcsclite1 arm64 2.3.3-1 [55.0 kB]
+Get:8 http://deb.debian.org/debian trixie/main arm64 openjdk-21-jre-headless arm64 21.0.10+7-1~deb13u1 [40.7 MB]
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC entries checked: /etc/perl /usr/local/lib/aarch64-linux-gnu/perl/5.40.1 /usr/local/share/perl/5.40.1 /usr/lib/aarch64-linux-gnu/perl5/5.40 /usr/share/perl5 /usr/lib/aarch64-linux-gnu/perl-base /usr/lib/aarch64-linux-gnu/perl/5.40 /usr/share/perl/5.40 /usr/local/lib/site_perl) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 8, <STDIN> line 8.)
+debconf: falling back to frontend: Teletype
+debconf: unable to initialize frontend: Teletype
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Noninteractive
+Fetched 42.5 MB in 1s (31.5 MB/s)
+Selecting previously unselected package ca-certificates-java.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 5643 files and directories currently installed.)
+Preparing to unpack .../0-ca-certificates-java_20240118_all.deb ...
+Unpacking ca-certificates-java (20240118) ...
+Selecting previously unselected package java-common.
+Preparing to unpack .../1-java-common_0.76_all.deb ...
+Unpacking java-common (0.76) ...
+Selecting previously unselected package libjpeg62-turbo:arm64.
+Preparing to unpack .../2-libjpeg62-turbo_1%3a2.1.5-4_arm64.deb ...
+Unpacking libjpeg62-turbo:arm64 (1:2.1.5-4) ...
+Selecting previously unselected package liblcms2-2:arm64.
+Preparing to unpack .../3-liblcms2-2_2.16-2_arm64.deb ...
+Unpacking liblcms2-2:arm64 (2.16-2) ...
+Selecting previously unselected package libnspr4:arm64.
+Preparing to unpack .../4-libnspr4_2%3a4.36-1_arm64.deb ...
+Unpacking libnspr4:arm64 (2:4.36-1) ...
+Selecting previously unselected package libnss3:arm64.
+Preparing to unpack .../5-libnss3_2%3a3.110-1+deb13u1_arm64.deb ...
+Unpacking libnss3:arm64 (2:3.110-1+deb13u1) ...
+Selecting previously unselected package libpcsclite1:arm64.
+Preparing to unpack .../6-libpcsclite1_2.3.3-1_arm64.deb ...
+Unpacking libpcsclite1:arm64 (2.3.3-1) ...
+Selecting previously unselected package openjdk-21-jre-headless:arm64.
+Preparing to unpack .../7-openjdk-21-jre-headless_21.0.10+7-1~deb13u1_arm64.deb ...
+Unpacking openjdk-21-jre-headless:arm64 (21.0.10+7-1~deb13u1) ...
+Setting up liblcms2-2:arm64 (2.16-2) ...
+Setting up java-common (0.76) ...
+Setting up libjpeg62-turbo:arm64 (1:2.1.5-4) ...
+Setting up libnspr4:arm64 (2:4.36-1) ...
+Setting up libpcsclite1:arm64 (2.3.3-1) ...
+Setting up ca-certificates-java (20240118) ...
+No JRE found. Skipping Java certificates setup.
+Setting up libnss3:arm64 (2:3.110-1+deb13u1) ...
+Setting up openjdk-21-jre-headless:arm64 (21.0.10+7-1~deb13u1) ...
+update-alternatives: using /usr/lib/jvm/java-21-openjdk-arm64/bin/java to provide /usr/bin/java (java) in auto mode
+update-alternatives: using /usr/lib/jvm/java-21-openjdk-arm64/bin/jpackage to provide /usr/bin/jpackage (jpackage) in auto mode
+update-alternatives: using /usr/lib/jvm/java-21-openjdk-arm64/bin/keytool to provide /usr/bin/keytool (keytool) in auto mode
+update-alternatives: using /usr/lib/jvm/java-21-openjdk-arm64/bin/rmiregistry to provide /usr/bin/rmiregistry (rmiregistry) in auto mode
+update-alternatives: using /usr/lib/jvm/java-21-openjdk-arm64/lib/jexec to provide /usr/bin/jexec (jexec) in auto mode
+Processing triggers for libc-bin (2.41-12+deb13u2) ...
+Processing triggers for ca-certificates-java (20240118) ...
+Adding debian:ACCVRAIZ1.pem
+Adding debian:AC_RAIZ_FNMT-RCM.pem
+Adding debian:AC_RAIZ_FNMT-RCM_SERVIDORES_SEGUROS.pem
+Adding debian:ANF_Secure_Server_Root_CA.pem
+Adding debian:Actalis_Authentication_Root_CA.pem
+Adding debian:AffirmTrust_Commercial.pem
+Adding debian:AffirmTrust_Networking.pem
+Adding debian:AffirmTrust_Premium.pem
+Adding debian:AffirmTrust_Premium_ECC.pem
+Adding debian:Amazon_Root_CA_1.pem
+Adding debian:Amazon_Root_CA_2.pem
+Adding debian:Amazon_Root_CA_3.pem
+Adding debian:Amazon_Root_CA_4.pem
+Adding debian:Atos_TrustedRoot_2011.pem
+Adding debian:Atos_TrustedRoot_Root_CA_ECC_TLS_2021.pem
+Adding debian:Atos_TrustedRoot_Root_CA_RSA_TLS_2021.pem
+Adding debian:Autoridad_de_Certificacion_Firmaprofesional_CIF_A62634068.pem
+Adding debian:BJCA_Global_Root_CA1.pem
+Adding debian:BJCA_Global_Root_CA2.pem
+Adding debian:Baltimore_CyberTrust_Root.pem
+Adding debian:Buypass_Class_2_Root_CA.pem
+Adding debian:Buypass_Class_3_Root_CA.pem
+Adding debian:CA_Disig_Root_R2.pem
+Adding debian:CFCA_EV_ROOT.pem
+Adding debian:COMODO_Certification_Authority.pem
+Adding debian:COMODO_ECC_Certification_Authority.pem
+Adding debian:COMODO_RSA_Certification_Authority.pem
+Adding debian:Certainly_Root_E1.pem
+Adding debian:Certainly_Root_R1.pem
+Adding debian:Certigna.pem
+Adding debian:Certigna_Root_CA.pem
+Adding debian:Certum_EC-384_CA.pem
+Adding debian:Certum_Trusted_Network_CA.pem
+Adding debian:Certum_Trusted_Network_CA_2.pem
+Adding debian:Certum_Trusted_Root_CA.pem
+Adding debian:CommScope_Public_Trust_ECC_Root-01.pem
+Adding debian:CommScope_Public_Trust_ECC_Root-02.pem
+Adding debian:CommScope_Public_Trust_RSA_Root-01.pem
+Adding debian:CommScope_Public_Trust_RSA_Root-02.pem
+Adding debian:Comodo_AAA_Services_root.pem
+Adding debian:D-TRUST_BR_Root_CA_1_2020.pem
+Adding debian:D-TRUST_BR_Root_CA_2_2023.pem
+Adding debian:D-TRUST_EV_Root_CA_1_2020.pem
+Adding debian:D-TRUST_EV_Root_CA_2_2023.pem
+Adding debian:D-TRUST_Root_Class_3_CA_2_2009.pem
+Adding debian:D-TRUST_Root_Class_3_CA_2_EV_2009.pem
+Adding debian:DigiCert_Assured_ID_Root_CA.pem
+Adding debian:DigiCert_Assured_ID_Root_G2.pem
+Adding debian:DigiCert_Assured_ID_Root_G3.pem
+Adding debian:DigiCert_Global_Root_CA.pem
+Adding debian:DigiCert_Global_Root_G2.pem
+Adding debian:DigiCert_Global_Root_G3.pem
+Adding debian:DigiCert_High_Assurance_EV_Root_CA.pem
+Adding debian:DigiCert_TLS_ECC_P384_Root_G5.pem
+Adding debian:DigiCert_TLS_RSA4096_Root_G5.pem
+Adding debian:DigiCert_Trusted_Root_G4.pem
+Adding debian:Entrust.net_Premium_2048_Secure_Server_CA.pem
+Adding debian:Entrust_Root_Certification_Authority.pem
+Adding debian:Entrust_Root_Certification_Authority_-_EC1.pem
+Adding debian:Entrust_Root_Certification_Authority_-_G2.pem
+Adding debian:FIRMAPROFESIONAL_CA_ROOT-A_WEB.pem
+Adding debian:GDCA_TrustAUTH_R5_ROOT.pem
+Adding debian:GLOBALTRUST_2020.pem
+Adding debian:GTS_Root_R1.pem
+Adding debian:GTS_Root_R2.pem
+Adding debian:GTS_Root_R3.pem
+Adding debian:GTS_Root_R4.pem
+Adding debian:GlobalSign_ECC_Root_CA_-_R4.pem
+Adding debian:GlobalSign_ECC_Root_CA_-_R5.pem
+Adding debian:GlobalSign_Root_CA.pem
+Adding debian:GlobalSign_Root_CA_-_R3.pem
+Adding debian:GlobalSign_Root_CA_-_R6.pem
+Adding debian:GlobalSign_Root_E46.pem
+Adding debian:GlobalSign_Root_R46.pem
+Adding debian:Go_Daddy_Class_2_CA.pem
+Adding debian:Go_Daddy_Root_Certificate_Authority_-_G2.pem
+Adding debian:HARICA_TLS_ECC_Root_CA_2021.pem
+Adding debian:HARICA_TLS_RSA_Root_CA_2021.pem
+Adding debian:Hellenic_Academic_and_Research_Institutions_ECC_RootCA_2015.pem
+Adding debian:Hellenic_Academic_and_Research_Institutions_RootCA_2015.pem
+Adding debian:HiPKI_Root_CA_-_G1.pem
+Adding debian:Hongkong_Post_Root_CA_3.pem
+Adding debian:ISRG_Root_X1.pem
+Adding debian:ISRG_Root_X2.pem
+Adding debian:IdenTrust_Commercial_Root_CA_1.pem
+Adding debian:IdenTrust_Public_Sector_Root_CA_1.pem
+Adding debian:Izenpe.com.pem
+Adding debian:Microsec_e-Szigno_Root_CA_2009.pem
+Adding debian:Microsoft_ECC_Root_Certificate_Authority_2017.pem
+Adding debian:Microsoft_RSA_Root_Certificate_Authority_2017.pem
+Adding debian:NAVER_Global_Root_Certification_Authority.pem
+Adding debian:NetLock_Arany_=Class_Gold=_Főtanúsítvány.pem
+Adding debian:OISTE_WISeKey_Global_Root_GB_CA.pem
+Adding debian:OISTE_WISeKey_Global_Root_GC_CA.pem
+Adding debian:QuoVadis_Root_CA_1_G3.pem
+Adding debian:QuoVadis_Root_CA_2.pem
+Adding debian:QuoVadis_Root_CA_2_G3.pem
+Adding debian:QuoVadis_Root_CA_3.pem
+Adding debian:QuoVadis_Root_CA_3_G3.pem
+Adding debian:SSL.com_EV_Root_Certification_Authority_ECC.pem
+Adding debian:SSL.com_EV_Root_Certification_Authority_RSA_R2.pem
+Adding debian:SSL.com_Root_Certification_Authority_ECC.pem
+Adding debian:SSL.com_Root_Certification_Authority_RSA.pem
+Adding debian:SSL.com_TLS_ECC_Root_CA_2022.pem
+Adding debian:SSL.com_TLS_RSA_Root_CA_2022.pem
+Adding debian:SZAFIR_ROOT_CA2.pem
+Adding debian:Sectigo_Public_Server_Authentication_Root_E46.pem
+Adding debian:Sectigo_Public_Server_Authentication_Root_R46.pem
+Adding debian:SecureSign_Root_CA12.pem
+Adding debian:SecureSign_Root_CA14.pem
+Adding debian:SecureSign_Root_CA15.pem
+Adding debian:SecureTrust_CA.pem
+Adding debian:Secure_Global_CA.pem
+Adding debian:Security_Communication_ECC_RootCA1.pem
+Adding debian:Security_Communication_RootCA2.pem
+Adding debian:Starfield_Class_2_CA.pem
+Adding debian:Starfield_Root_Certificate_Authority_-_G2.pem
+Adding debian:Starfield_Services_Root_Certificate_Authority_-_G2.pem
+Adding debian:SwissSign_Gold_CA_-_G2.pem
+Adding debian:T-TeleSec_GlobalRoot_Class_2.pem
+Adding debian:T-TeleSec_GlobalRoot_Class_3.pem
+Adding debian:TUBITAK_Kamu_SM_SSL_Kok_Sertifikasi_-_Surum_1.pem
+Adding debian:TWCA_CYBER_Root_CA.pem
+Adding debian:TWCA_Global_Root_CA.pem
+Adding debian:TWCA_Root_Certification_Authority.pem
+Adding debian:Telekom_Security_TLS_ECC_Root_2020.pem
+Adding debian:Telekom_Security_TLS_RSA_Root_2023.pem
+Adding debian:TeliaSonera_Root_CA_v1.pem
+Adding debian:Telia_Root_CA_v2.pem
+Adding debian:TrustAsia_Global_Root_CA_G3.pem
+Adding debian:TrustAsia_Global_Root_CA_G4.pem
+Adding debian:Trustwave_Global_Certification_Authority.pem
+Adding debian:Trustwave_Global_ECC_P256_Certification_Authority.pem
+Adding debian:Trustwave_Global_ECC_P384_Certification_Authority.pem
+Adding debian:TunTrust_Root_CA.pem
+Adding debian:UCA_Extended_Validation_Root.pem
+Adding debian:UCA_Global_G2_Root.pem
+Adding debian:USERTrust_ECC_Certification_Authority.pem
+Adding debian:USERTrust_RSA_Certification_Authority.pem
+Adding debian:XRamp_Global_CA_Root.pem
+Adding debian:certSIGN_ROOT_CA.pem
+Adding debian:certSIGN_Root_CA_G2.pem
+Adding debian:e-Szigno_Root_CA_2017.pem
+Adding debian:ePKI_Root_Certification_Authority.pem
+Adding debian:emSign_ECC_Root_CA_-_C3.pem
+Adding debian:emSign_ECC_Root_CA_-_G3.pem
+Adding debian:emSign_Root_CA_-_C1.pem
+Adding debian:emSign_Root_CA_-_G1.pem
+Adding debian:vTrus_ECC_Root_CA.pem
+Adding debian:vTrus_Root_CA.pem
+done.
+Requirement already satisfied: setuptools<81 in /usr/local/lib/python3.10/site-packages (79.0.1)
+Collecting numpy<2
+  Downloading numpy-1.26.4-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (14.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 14.2/14.2 MB 47.5 MB/s eta 0:00:00
+Installing collected packages: numpy
+Successfully installed numpy-1.26.4
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+
+[notice] A new release of pip is available: 23.0.1 -> 26.0.1
+[notice] To update, run: pip install --upgrade pip
+Obtaining file:///workspace/mar30_submission/reproduction/work/PyRCA
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Requirement already satisfied: numpy>=1.17 in /usr/local/lib/python3.10/site-packages (from sfr-pyrca==1.0.1) (1.26.4)
+Collecting pandas>=1.1.0
+  Downloading pandas-2.3.3-cp310-cp310-manylinux_2_24_aarch64.manylinux_2_28_aarch64.whl (12.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.1/12.1 MB 39.4 MB/s eta 0:00:00
+Collecting scikit-learn<1.2,>=0.24
+  Downloading scikit_learn-1.1.3-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (30.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 30.1/30.1 MB 61.0 MB/s eta 0:00:00
+Collecting networkx>=2.6
+  Downloading networkx-3.4.2-py3-none-any.whl (1.7 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.7/1.7 MB 58.6 MB/s eta 0:00:00
+Collecting matplotlib
+  Downloading matplotlib-3.10.8-cp310-cp310-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl (9.5 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.5/9.5 MB 60.0 MB/s eta 0:00:00
+Collecting pyyaml
+  Downloading pyyaml-6.0.3-cp310-cp310-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl (740 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 740.6/740.6 kB 48.7 MB/s eta 0:00:00
+Collecting schema
+  Downloading schema-0.7.8-py2.py3-none-any.whl (19 kB)
+Collecting pyparsing
+  Downloading pyparsing-3.3.2-py3-none-any.whl (122 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 122.8/122.8 kB 34.4 MB/s eta 0:00:00
+Collecting dill
+  Downloading dill-0.4.1-py3-none-any.whl (120 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 120.0/120.0 kB 50.9 MB/s eta 0:00:00
+Collecting tqdm
+  Downloading tqdm-4.67.3-py3-none-any.whl (78 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.4/78.4 kB 21.4 MB/s eta 0:00:00
+Requirement already satisfied: wheel in /usr/local/lib/python3.10/site-packages (from sfr-pyrca==1.0.1) (0.45.1)
+Collecting packaging
+  Downloading packaging-26.0-py3-none-any.whl (74 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 74.4/74.4 kB 24.7 MB/s eta 0:00:00
+Collecting JPype1
+  Downloading jpype1-1.6.0-cp310-cp310-manylinux2014_aarch64.manylinux_2_17_aarch64.whl (468 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 468.8/468.8 kB 56.8 MB/s eta 0:00:00
+Collecting python-dateutil>=2.8.2
+  Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 51.5 MB/s eta 0:00:00
+Collecting tzdata>=2022.7
+  Downloading tzdata-2025.3-py2.py3-none-any.whl (348 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 348.5/348.5 kB 38.6 MB/s eta 0:00:00
+Collecting pytz>=2020.1
+  Downloading pytz-2026.1.post1-py2.py3-none-any.whl (510 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 510.5/510.5 kB 50.0 MB/s eta 0:00:00
+Collecting threadpoolctl>=2.0.0
+  Downloading threadpoolctl-3.6.0-py3-none-any.whl (18 kB)
+Collecting joblib>=1.0.0
+  Downloading joblib-1.5.3-py3-none-any.whl (309 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 309.1/309.1 kB 32.9 MB/s eta 0:00:00
+Collecting scipy>=1.3.2
+  Downloading scipy-1.15.3-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (35.5 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.5/35.5 MB 62.7 MB/s eta 0:00:00
+Collecting pillow>=8
+  Downloading pillow-12.1.1-cp310-cp310-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl (6.3 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.3/6.3 MB 60.6 MB/s eta 0:00:00
+Collecting cycler>=0.10
+  Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
+Collecting kiwisolver>=1.3.1
+  Downloading kiwisolver-1.5.0-cp310-cp310-manylinux_2_24_aarch64.manylinux_2_28_aarch64.whl (1.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 55.0 MB/s eta 0:00:00
+Collecting fonttools>=4.22.0
+  Downloading fonttools-4.62.1-cp310-cp310-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl (4.9 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.9/4.9 MB 48.6 MB/s eta 0:00:00
+Collecting contourpy>=1.0.1
+  Downloading contourpy-1.3.2-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (312 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 312.1/312.1 kB 37.8 MB/s eta 0:00:00
+Collecting six>=1.5
+  Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+Installing collected packages: schema, pytz, tzdata, tqdm, threadpoolctl, six, scipy, pyyaml, pyparsing, pillow, packaging, networkx, kiwisolver, joblib, fonttools, dill, cycler, contourpy, scikit-learn, python-dateutil, JPype1, pandas, matplotlib, sfr-pyrca
+  Running setup.py develop for sfr-pyrca
+Successfully installed JPype1-1.6.0 contourpy-1.3.2 cycler-0.12.1 dill-0.4.1 fonttools-4.62.1 joblib-1.5.3 kiwisolver-1.5.0 matplotlib-3.10.8 networkx-3.4.2 packaging-26.0 pandas-2.3.3 pillow-12.1.1 pyparsing-3.3.2 python-dateutil-2.9.0.post0 pytz-2026.1.post1 pyyaml-6.0.3 schema-0.7.8 scikit-learn-1.1.3 scipy-1.15.3 sfr-pyrca-1.0.1 six-1.17.0 threadpoolctl-3.6.0 tqdm-4.67.3 tzdata-2025.3
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+
+[notice] A new release of pip is available: 23.0.1 -> 26.0.1
+[notice] To update, run: pip install --upgrade pip
+/usr/local/lib/python3.10/site-packages/numpy/lib/function_base.py:2897: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+/usr/local/lib/python3.10/site-packages/numpy/lib/function_base.py:2898: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+JVM already started
+  0%|          | 0/9 [00:00<?, ?it/s]  0%|          | 0/9 [00:00<?, ?it/s]Depth=0, working on node 0:  11%|█         | 1/9 [00:00<00:00, 12945.38it/s]Depth=0, working on node 1:  22%|██▏       | 2/9 [00:00<00:00, 2152.58it/s] Depth=0, working on node 2:  33%|███▎      | 3/9 [00:00<00:00, 2064.46it/s]Depth=0, working on node 3:  44%|████▍     | 4/9 [00:00<00:00, 2199.71it/s]Depth=0, working on node 4:  56%|█████▌    | 5/9 [00:00<00:00, 2266.95it/s]Depth=0, working on node 5:  67%|██████▋   | 6/9 [00:00<00:00, 2316.23it/s]Depth=0, working on node 6:  78%|███████▊  | 7/9 [00:00<00:00, 2411.11it/s]Depth=0, working on node 7:  89%|████████▉ | 8/9 [00:00<00:00, 2525.93it/s]Depth=0, working on node 8: 100%|██████████| 9/9 [00:00<00:00, 2628.01it/s]Depth=0, working on node 8: 100%|██████████| 9/9 [00:00<00:00, 2438.55it/s]Depth=0, working on node 8:   0%|          | 0/9 [00:00<?, ?it/s]          Depth=1, working on node 0:  11%|█         | 1/9 [00:00<00:00, 21959.71it/s]Depth=1, working on node 1:  22%|██▏       | 2/9 [00:00<00:00, 1857.53it/s] Depth=1, working on node 2:  33%|███▎      | 3/9 [00:00<00:00, 1522.43it/s]Depth=1, working on node 3:  44%|████▍     | 4/9 [00:00<00:00, 1816.50it/s]Depth=1, working on node 4:  56%|█████▌    | 5/9 [00:00<00:00, 2236.01it/s]Depth=1, working on node 5:  67%|██████▋   | 6/9 [00:00<00:00, 2648.20it/s]Depth=1, working on node 6:  78%|███████▊  | 7/9 [00:00<00:00, 2751.39it/s]Depth=1, working on node 7:  89%|████████▉ | 8/9 [00:00<00:00, 2834.95it/s]Depth=1, working on node 8: 100%|██████████| 9/9 [00:00<00:00, 2491.99it/s]Depth=1, working on node 8: 100%|██████████| 9/9 [00:00<00:00, 2361.21it/s]Depth=1, working on node 8:   0%|          | 0/9 [00:00<?, ?it/s]          Depth=2, working on node 0:  11%|█         | 1/9 [00:00<00:00, 13573.80it/s]Depth=2, working on node 1:  22%|██▏       | 2/9 [00:00<00:00, 2111.40it/s] Depth=2, working on node 2:  33%|███▎      | 3/9 [00:00<00:00, 1445.15it/s]Depth=2, working on node 3:  44%|████▍     | 4/9 [00:00<00:00, 1785.38it/s]Depth=2, working on node 4:  56%|█████▌    | 5/9 [00:00<00:00, 2200.12it/s]Depth=2, working on node 5:  67%|██████▋   | 6/9 [00:00<00:00, 2603.54it/s]Depth=2, working on node 6:  78%|███████▊  | 7/9 [00:00<00:00, 2971.97it/s]Depth=2, working on node 7:  89%|████████▉ | 8/9 [00:00<00:00, 3096.00it/s]Depth=2, working on node 8: 100%|██████████| 9/9 [00:00<00:00, 2009.41it/s]Depth=2, working on node 8: 100%|██████████| 9/9 [00:00<00:00, 1933.25it/s]Depth=2, working on node 8:   0%|          | 0/9 [00:00<?, ?it/s]          Depth=3, working on node 0:  11%|█         | 1/9 [00:00<00:00, 20763.88it/s]Depth=3, working on node 1:  22%|██▏       | 2/9 [00:00<00:00, 15768.06it/s]Depth=3, working on node 2:  33%|███▎      | 3/9 [00:00<00:00, 2857.16it/s] Depth=3, working on node 3:  44%|████▍     | 4/9 [00:00<00:00, 3553.74it/s]Depth=3, working on node 4:  56%|█████▌    | 5/9 [00:00<00:00, 4351.84it/s]Depth=3, working on node 5:  67%|██████▋   | 6/9 [00:00<00:00, 5127.51it/s]Depth=3, working on node 6:  78%|███████▊  | 7/9 [00:00<00:00, 5678.94it/s]Depth=3, working on node 7:  89%|████████▉ | 8/9 [00:00<00:00, 6239.20it/s]Depth=3, working on node 8: 100%|██████████| 9/9 [00:00<00:00, 2661.74it/s]Depth=3, working on node 8: 100%|██████████| 9/9 [00:00<00:00, 2601.39it/s]Depth=3, working on node 8:   0%|          | 0/9 [00:00<?, ?it/s]          Depth=4, working on node 0:  11%|█         | 1/9 [00:00<00:00, 47127.01it/s]Depth=4, working on node 1:  22%|██▏       | 2/9 [00:00<00:00, 18157.16it/s]Depth=4, working on node 2:  33%|███▎      | 3/9 [00:00<00:00, 2162.01it/s] Depth=4, working on node 3:  44%|████▍     | 4/9 [00:00<00:00, 2427.96it/s]Depth=4, working on node 4:  56%|█████▌    | 5/9 [00:00<00:00, 2851.33it/s]Depth=4, working on node 5:  67%|██████▋   | 6/9 [00:00<00:00, 3179.51it/s]Depth=4, working on node 6:  78%|███████▊  | 7/9 [00:00<00:00, 3464.73it/s]Depth=4, working on node 7:  89%|████████▉ | 8/9 [00:00<00:00, 3582.20it/s]Depth=4, working on node 8: 100%|██████████| 9/9 [00:00<00:00, 1577.79it/s]Depth=4, working on node 8: 100%|██████████| 9/9 [00:00<00:00, 1518.76it/s]Depth=4, working on node 8:   0%|          | 0/9 [00:00<?, ?it/s]          Depth=5, working on node 0:  11%|█         | 1/9 [00:00<00:00, 10255.02it/s]Depth=5, working on node 1:  22%|██▏       | 2/9 [00:00<00:00, 11155.06it/s]Depth=5, working on node 2:  33%|███▎      | 3/9 [00:00<00:00, 4693.37it/s] Depth=5, working on node 3:  44%|████▍     | 4/9 [00:00<00:00, 5588.68it/s]Depth=5, working on node 4:  56%|█████▌    | 5/9 [00:00<00:00, 6478.69it/s]Depth=5, working on node 5:  67%|██████▋   | 6/9 [00:00<00:00, 7084.97it/s]Depth=5, working on node 6:  78%|███████▊  | 7/9 [00:00<00:00, 7279.97it/s]Depth=5, working on node 7:  89%|████████▉ | 8/9 [00:00<00:00, 7520.04it/s]Depth=5, working on node 8: 100%|██████████| 9/9 [00:00<00:00, 1902.18it/s]Depth=5, working on node 8: 100%|██████████| 9/9 [00:00<00:00, 1849.25it/s]Depth=5, working on node 8: 100%|██████████| 9/9 [00:00<00:00, 1798.42it/s]
+WARNING:root:Replacing existing CPD for apt
+WARNING:root:Replacing existing CPD for avg_cpu
+WARNING:root:Replacing existing CPD for gc
+WARNING:root:Replacing existing CPD for pod
+WARNING: Metric db is not in the Bayesian network.
++--------------+----------+
+| conn_pool(0) | 0.779713 |
++--------------+----------+
+| conn_pool(1) | 0.220287 |
++--------------+----------+
++-----------+---------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+
+| avg_cpu   | avg_cpu(0)          | avg_cpu(0)         | avg_cpu(0)         | avg_cpu(0)         | avg_cpu(1)         | avg_cpu(1)         | avg_cpu(1)         | avg_cpu(1)         |
++-----------+---------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+
+| conn_pool | conn_pool(0)        | conn_pool(0)       | conn_pool(1)       | conn_pool(1)       | conn_pool(0)       | conn_pool(0)       | conn_pool(1)       | conn_pool(1)       |
++-----------+---------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+
+| request   | request(0)          | request(1)         | request(0)         | request(1)         | request(0)         | request(1)         | request(0)         | request(1)         |
++-----------+---------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+
+| apt(0)    | 0.9738067520372526  | 0.8738067520372526 | 0.8738067520372526 | 0.7738067520372526 | 0.8738067520372526 | 0.7738067520372526 | 0.7738067520372526 | 0.6738067520372526 |
++-----------+---------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+
+| apt(1)    | 0.02619324796274738 | 0.1261932479627474 | 0.1261932479627474 | 0.2261932479627474 | 0.1261932479627474 | 0.2261932479627474 | 0.2261932479627474 | 0.3261932479627474 |
++-----------+---------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+
++------------+--------------+--------------+--------------+---------------------+--------------+---------------------+---------------------+---------------------+---------------------+--------------+---------------------+--------------+---------------------+--------------+---------------------+---------------------+--------------+---------------------+---------------------+--------------+---------------------+---------------------+---------------------+--------------+---------------------+--------------+---------------------+---------------------+---------------------+---------------------+---------------------+---------------------+
+| conn_pool  | conn_pool(0) | conn_pool(0) | conn_pool(0) | conn_pool(0)        | conn_pool(0) | conn_pool(0)        | conn_pool(0)        | conn_pool(0)        | conn_pool(0)        | conn_pool(0) | conn_pool(0)        | conn_pool(0) | conn_pool(0)        | conn_pool(0) | conn_pool(0)        | conn_pool(0)        | conn_pool(1) | conn_pool(1)        | conn_pool(1)        | conn_pool(1) | conn_pool(1)        | conn_pool(1)        | conn_pool(1)        | conn_pool(1) | conn_pool(1)        | conn_pool(1) | conn_pool(1)        | conn_pool(1)        | conn_pool(1)        | conn_pool(1)        | conn_pool(1)        | conn_pool(1)        |
++------------+--------------+--------------+--------------+---------------------+--------------+---------------------+---------------------+---------------------+---------------------+--------------+---------------------+--------------+---------------------+--------------+---------------------+---------------------+--------------+---------------------+---------------------+--------------+---------------------+---------------------+---------------------+--------------+---------------------+--------------+---------------------+---------------------+---------------------+---------------------+---------------------+---------------------+
+| gc         | gc(0)        | gc(0)        | gc(0)        | gc(0)               | gc(0)        | gc(0)               | gc(0)               | gc(0)               | gc(1)               | gc(1)        | gc(1)               | gc(1)        | gc(1)               | gc(1)        | gc(1)               | gc(1)               | gc(0)        | gc(0)               | gc(0)               | gc(0)        | gc(0)               | gc(0)               | gc(0)               | gc(0)        | gc(1)               | gc(1)        | gc(1)               | gc(1)               | gc(1)               | gc(1)               | gc(1)               | gc(1)               |
++------------+--------------+--------------+--------------+---------------------+--------------+---------------------+---------------------+---------------------+---------------------+--------------+---------------------+--------------+---------------------+--------------+---------------------+---------------------+--------------+---------------------+---------------------+--------------+---------------------+---------------------+---------------------+--------------+---------------------+--------------+---------------------+---------------------+---------------------+---------------------+---------------------+---------------------+
+| gen_size   | gen_size(0)  | gen_size(0)  | gen_size(0)  | gen_size(0)         | gen_size(1)  | gen_size(1)         | gen_size(1)         | gen_size(1)         | gen_size(0)         | gen_size(0)  | gen_size(0)         | gen_size(0)  | gen_size(1)         | gen_size(1)  | gen_size(1)         | gen_size(1)         | gen_size(0)  | gen_size(0)         | gen_size(0)         | gen_size(0)  | gen_size(1)         | gen_size(1)         | gen_size(1)         | gen_size(1)  | gen_size(0)         | gen_size(0)  | gen_size(0)         | gen_size(0)         | gen_size(1)         | gen_size(1)         | gen_size(1)         | gen_size(1)         |
++------------+--------------+--------------+--------------+---------------------+--------------+---------------------+---------------------+---------------------+---------------------+--------------+---------------------+--------------+---------------------+--------------+---------------------+---------------------+--------------+---------------------+---------------------+--------------+---------------------+---------------------+---------------------+--------------+---------------------+--------------+---------------------+---------------------+---------------------+---------------------+---------------------+---------------------+
+| pod        | pod(0)       | pod(0)       | pod(1)       | pod(1)              | pod(0)       | pod(0)              | pod(1)              | pod(1)              | pod(0)              | pod(0)       | pod(1)              | pod(1)       | pod(0)              | pod(0)       | pod(1)              | pod(1)              | pod(0)       | pod(0)              | pod(1)              | pod(1)       | pod(0)              | pod(0)              | pod(1)              | pod(1)       | pod(0)              | pod(0)       | pod(1)              | pod(1)              | pod(0)              | pod(0)              | pod(1)              | pod(1)              |
++------------+--------------+--------------+--------------+---------------------+--------------+---------------------+---------------------+---------------------+---------------------+--------------+---------------------+--------------+---------------------+--------------+---------------------+---------------------+--------------+---------------------+---------------------+--------------+---------------------+---------------------+---------------------+--------------+---------------------+--------------+---------------------+---------------------+---------------------+---------------------+---------------------+---------------------+
+| request    | request(0)   | request(1)   | request(0)   | request(1)          | request(0)   | request(1)          | request(0)          | request(1)          | request(0)          | request(1)   | request(0)          | request(1)   | request(0)          | request(1)   | request(0)          | request(1)          | request(0)   | request(1)          | request(0)          | request(1)   | request(0)          | request(1)          | request(0)          | request(1)   | request(0)          | request(1)   | request(0)          | request(1)          | request(0)          | request(1)          | request(0)          | request(1)          |
++------------+--------------+--------------+--------------+---------------------+--------------+---------------------+---------------------+---------------------+---------------------+--------------+---------------------+--------------+---------------------+--------------+---------------------+---------------------+--------------+---------------------+---------------------+--------------+---------------------+---------------------+---------------------+--------------+---------------------+--------------+---------------------+---------------------+---------------------+---------------------+---------------------+---------------------+
+| avg_cpu(0) | 0.99         | 0.89         | 0.89         | 0.79                | 0.89         | 0.79                | 0.79                | 0.69                | 0.8709677419354839  | 0.5          | 0.7709677419354839  | 0.4          | 0.7709677419354839  | 0.4          | 0.6709677419354838  | 0.30000000000000004 | 0.89         | 0.79                | 0.79                | 0.5          | 0.79                | 0.69                | 0.69                | 0.4          | 0.7709677419354839  | 0.4          | 0.6709677419354838  | 0.30000000000000004 | 0.6709677419354838  | 0.30000000000000004 | 0.5709677419354838  | 0.20000000000000007 |
++------------+--------------+--------------+--------------+---------------------+--------------+---------------------+---------------------+---------------------+---------------------+--------------+---------------------+--------------+---------------------+--------------+---------------------+---------------------+--------------+---------------------+---------------------+--------------+---------------------+---------------------+---------------------+--------------+---------------------+--------------+---------------------+---------------------+---------------------+---------------------+---------------------+---------------------+
+| avg_cpu(1) | 0.01         | 0.11         | 0.11         | 0.21000000000000002 | 0.11         | 0.21000000000000002 | 0.21000000000000002 | 0.31000000000000005 | 0.12903225806451613 | 0.5          | 0.22903225806451613 | 0.6          | 0.22903225806451613 | 0.6          | 0.32903225806451614 | 0.7                 | 0.11         | 0.21000000000000002 | 0.21000000000000002 | 0.5          | 0.21000000000000002 | 0.31000000000000005 | 0.31000000000000005 | 0.6          | 0.22903225806451613 | 0.6          | 0.32903225806451614 | 0.7                 | 0.32903225806451614 | 0.7                 | 0.42903225806451617 | 0.7999999999999999  |
++------------+--------------+--------------+--------------+---------------------+--------------+---------------------+---------------------+---------------------+---------------------+--------------+---------------------+--------------+---------------------+--------------+---------------------+---------------------+--------------+---------------------+---------------------+--------------+---------------------+---------------------+---------------------+--------------+---------------------+--------------+---------------------+---------------------+---------------------+---------------------+---------------------+---------------------+
++------------+-----------+
+| request(0) | 0.9868    |
++------------+-----------+
+| request(1) | 0.0132003 |
++------------+-----------+
++-----------+--------------+--------------+--------------+---------------------+--------------------+--------------------+--------------------+--------------+--------------+---------------------+---------------------+--------------+--------------------+--------------------+--------------------+--------------+
+| conn_pool | conn_pool(0) | conn_pool(0) | conn_pool(0) | conn_pool(0)        | conn_pool(0)       | conn_pool(0)       | conn_pool(0)       | conn_pool(0) | conn_pool(1) | conn_pool(1)        | conn_pool(1)        | conn_pool(1) | conn_pool(1)       | conn_pool(1)       | conn_pool(1)       | conn_pool(1) |
++-----------+--------------+--------------+--------------+---------------------+--------------------+--------------------+--------------------+--------------+--------------+---------------------+---------------------+--------------+--------------------+--------------------+--------------------+--------------+
+| gen_size  | gen_size(0)  | gen_size(0)  | gen_size(0)  | gen_size(0)         | gen_size(1)        | gen_size(1)        | gen_size(1)        | gen_size(1)  | gen_size(0)  | gen_size(0)         | gen_size(0)         | gen_size(0)  | gen_size(1)        | gen_size(1)        | gen_size(1)        | gen_size(1)  |
++-----------+--------------+--------------+--------------+---------------------+--------------------+--------------------+--------------------+--------------+--------------+---------------------+---------------------+--------------+--------------------+--------------------+--------------------+--------------+
+| pod       | pod(0)       | pod(0)       | pod(1)       | pod(1)              | pod(0)             | pod(0)             | pod(1)             | pod(1)       | pod(0)       | pod(0)              | pod(1)              | pod(1)       | pod(0)             | pod(0)             | pod(1)             | pod(1)       |
++-----------+--------------+--------------+--------------+---------------------+--------------------+--------------------+--------------------+--------------+--------------+---------------------+---------------------+--------------+--------------------+--------------------+--------------------+--------------+
+| request   | request(0)   | request(1)   | request(0)   | request(1)          | request(0)         | request(1)         | request(0)         | request(1)   | request(0)   | request(1)          | request(0)          | request(1)   | request(0)         | request(1)         | request(0)         | request(1)   |
++-----------+--------------+--------------+--------------+---------------------+--------------------+--------------------+--------------------+--------------+--------------+---------------------+---------------------+--------------+--------------------+--------------------+--------------------+--------------+
+| gc(0)     | 0.99         | 0.89         | 0.89         | 0.79                | 0.7909967845659164 | 0.6909967845659164 | 0.6442307692307692 | 0.5          | 0.89         | 0.79                | 0.79                | 0.5          | 0.6909967845659164 | 0.5909967845659164 | 0.5442307692307692 | 0.4          |
++-----------+--------------+--------------+--------------+---------------------+--------------------+--------------------+--------------------+--------------+--------------+---------------------+---------------------+--------------+--------------------+--------------------+--------------------+--------------+
+| gc(1)     | 0.01         | 0.11         | 0.11         | 0.21000000000000002 | 0.2090032154340836 | 0.3090032154340836 | 0.3557692307692308 | 0.5          | 0.11         | 0.21000000000000002 | 0.21000000000000002 | 0.5          | 0.3090032154340836 | 0.4090032154340836 | 0.4557692307692308 | 0.6          |
++-----------+--------------+--------------+--------------+---------------------+--------------------+--------------------+--------------------+--------------+--------------+---------------------+---------------------+--------------+--------------------+--------------------+--------------------+--------------+
++-------------+-----------+
+| gen_size(0) | 0.973996  |
++-------------+-----------+
+| gen_size(1) | 0.0260037 |
++-------------+-----------+
++----------+----------------------+-------------+
+| ROOT_pod | ROOT_pod(0)          | ROOT_pod(1) |
++----------+----------------------+-------------+
+| pod(0)   | 0.99                 | 0.01        |
++----------+----------------------+-------------+
+| pod(1)   | 0.010000000000000009 | 0.99        |
++----------+----------------------+-------------+
++---------+----------------------+------------+
+| ROOT_db | ROOT_db(0)           | ROOT_db(1) |
++---------+----------------------+------------+
+| db(0)   | 0.99                 | 0.01       |
++---------+----------------------+------------+
+| db(1)   | 0.010000000000000009 | 0.99       |
++---------+----------------------+------------+
++------------+------+
+| ROOT_db(0) | 0.48 |
++------------+------+
+| ROOT_db(1) | 0.52 |
++------------+------+
++-------------+------+
+| ROOT_pod(0) | 0.49 |
++-------------+------+
+| ROOT_pod(1) | 0.51 |
++-------------+------+
+WARNING:root:Replacing existing CPD for conn_pool
+WARNING:root:Replacing existing CPD for gen_size
+WARNING:root:Replacing existing CPD for request
+/workspace/mar30_submission/reproduction/work/PyRCA/pyrca/thirdparty/pgmpy/factors/discrete/DiscreteFactor.py:521: UserWarning: Found unknown state name. Trying to switch to using all state names as state numbers
+  warn(
+WARNING: Metric jetty is not in the Bayesian network.
+  0%|          | 0/7 [00:00<?, ?it/s]Finding Elimination Order: :   0%|          | 0/7 [00:00<?, ?it/s]Finding Elimination Order: : 100%|██████████| 7/7 [00:00<00:00, 25201.83it/s]
+  0%|          | 0/7 [00:00<?, ?it/s]Eliminating: gc:   0%|          | 0/7 [00:00<?, ?it/s]Eliminating: pod:   0%|          | 0/7 [00:00<?, ?it/s]Eliminating: ROOT_gen_size:   0%|          | 0/7 [00:00<?, ?it/s]Eliminating: avg_cpu:   0%|          | 0/7 [00:00<?, ?it/s]      Eliminating: request:   0%|          | 0/7 [00:00<?, ?it/s]Eliminating: gen_size:   0%|          | 0/7 [00:00<?, ?it/s]Eliminating: ROOT_request:   0%|          | 0/7 [00:00<?, ?it/s]Eliminating: ROOT_request: 100%|██████████| 7/7 [00:00<00:00, 3192.01it/s]
+0it [00:00, ?it/s]Finding Elimination Order: : : 0it [00:00, ?it/s]Finding Elimination Order: : : 0it [00:00, ?it/s]
+0it [00:00, ?it/s]0it [00:00, ?it/s]
+  0%|          | 0/7 [00:00<?, ?it/s]Finding Elimination Order: :   0%|          | 0/7 [00:00<?, ?it/s]Finding Elimination Order: : 100%|██████████| 7/7 [00:00<00:00, 28926.23it/s]
+  0%|          | 0/7 [00:00<?, ?it/s]Eliminating: gc:   0%|          | 0/7 [00:00<?, ?it/s]Eliminating: pod:   0%|          | 0/7 [00:00<?, ?it/s]Eliminating: ROOT_pod:   0%|          | 0/7 [00:00<?, ?it/s]Eliminating: avg_cpu:   0%|          | 0/7 [00:00<?, ?it/s] Eliminating: request:   0%|          | 0/7 [00:00<?, ?it/s]Eliminating: gen_size:   0%|          | 0/7 [00:00<?, ?it/s]Eliminating: ROOT_request:   0%|          | 0/7 [00:00<?, ?it/s]Eliminating: ROOT_request: 100%|██████████| 7/7 [00:00<00:00, 3100.66it/s]
+  0%|          | 0/7 [00:00<?, ?it/s]Finding Elimination Order: :   0%|          | 0/7 [00:00<?, ?it/s]Finding Elimination Order: : 100%|██████████| 7/7 [00:00<00:00, 32768.00it/s]
+  0%|          | 0/7 [00:00<?, ?it/s]Eliminating: gc:   0%|          | 0/7 [00:00<?, ?it/s]Eliminating: pod:   0%|          | 0/7 [00:00<?, ?it/s]Eliminating: ROOT_gen_size:   0%|          | 0/7 [00:00<?, ?it/s]Eliminating: ROOT_pod:   0%|          | 0/7 [00:00<?, ?it/s]     Eliminating: avg_cpu:   0%|          | 0/7 [00:00<?, ?it/s] Eliminating: gen_size:   0%|          | 0/7 [00:00<?, ?it/s]Eliminating: request:   0%|          | 0/7 [00:00<?, ?it/s] Eliminating: request: 100%|██████████| 7/7 [00:00<00:00, 3396.20it/s]
+0it [00:00, ?it/s]Finding Elimination Order: : : 0it [00:00, ?it/s]Finding Elimination Order: : : 0it [00:00, ?it/s]
+0it [00:00, ?it/s]0it [00:00, ?it/s]
+  0%|          | 0/7 [00:00<?, ?it/s]Finding Elimination Order: :   0%|          | 0/7 [00:00<?, ?it/s]Finding Elimination Order: : 100%|██████████| 7/7 [00:00<00:00, 27439.37it/s]
+  0%|          | 0/7 [00:00<?, ?it/s]Eliminating: gc:   0%|          | 0/7 [00:00<?, ?it/s]Eliminating: pod:   0%|          | 0/7 [00:00<?, ?it/s]Eliminating: ROOT_gen_size:   0%|          | 0/7 [00:00<?, ?it/s]Eliminating: ROOT_pod:   0%|          | 0/7 [00:00<?, ?it/s]     Eliminating: gen_size:   0%|          | 0/7 [00:00<?, ?it/s]Eliminating: ROOT_request:   0%|          | 0/7 [00:00<?, ?it/s]Eliminating: request:   0%|          | 0/7 [00:00<?, ?it/s]     Eliminating: request: 100%|██████████| 7/7 [00:00<00:00, 3342.46it/s]
+  0%|          | 0/7 [00:00<?, ?it/s]Finding Elimination Order: :   0%|          | 0/7 [00:00<?, ?it/s]Finding Elimination Order: : 100%|██████████| 7/7 [00:00<00:00, 26935.90it/s]
+  0%|          | 0/7 [00:00<?, ?it/s]Eliminating: ROOT_gen_size:   0%|          | 0/7 [00:00<?, ?it/s]Eliminating: ROOT_pod:   0%|          | 0/7 [00:00<?, ?it/s]     Eliminating: avg_cpu:   0%|          | 0/7 [00:00<?, ?it/s] Eliminating: pod:   0%|          | 0/7 [00:00<?, ?it/s]    Eliminating: gen_size:   0%|          | 0/7 [00:00<?, ?it/s]Eliminating: ROOT_request:   0%|          | 0/7 [00:00<?, ?it/s]Eliminating: request:   0%|          | 0/7 [00:00<?, ?it/s]     Eliminating: request: 100%|██████████| 7/7 [00:00<00:00, 4240.95it/s]
+  0%|          | 0/7 [00:00<?, ?it/s]Finding Elimination Order: :   0%|          | 0/7 [00:00<?, ?it/s]Finding Elimination Order: : 100%|██████████| 7/7 [00:00<00:00, 30330.71it/s]
+  0%|          | 0/7 [00:00<?, ?it/s]Eliminating: gc:   0%|          | 0/7 [00:00<?, ?it/s]Eliminating: pod:   0%|          | 0/7 [00:00<?, ?it/s]Eliminating: ROOT_gen_size:   0%|          | 0/7 [00:00<?, ?it/s]Eliminating: ROOT_pod:   0%|          | 0/7 [00:00<?, ?it/s]     Eliminating: avg_cpu:   0%|          | 0/7 [00:00<?, ?it/s] Eliminating: gen_size:   0%|          | 0/7 [00:00<?, ?it/s]Eliminating: request:   0%|          | 0/7 [00:00<?, ?it/s] Eliminating: request: 100%|██████████| 7/7 [00:00<00:00, 3436.75it/s]
+  0%|          | 0/7 [00:00<?, ?it/s]Finding Elimination Order: :   0%|          | 0/7 [00:00<?, ?it/s]Finding Elimination Order: : 100%|██████████| 7/7 [00:00<00:00, 32622.36it/s]
+  0%|          | 0/7 [00:00<?, ?it/s]Eliminating: gc:   0%|          | 0/7 [00:00<?, ?it/s]Eliminating: pod:   0%|          | 0/7 [00:00<?, ?it/s]Eliminating: ROOT_gen_size:   0%|          | 0/7 [00:00<?, ?it/s]Eliminating: ROOT_pod:   0%|          | 0/7 [00:00<?, ?it/s]     Eliminating: avg_cpu:   0%|          | 0/7 [00:00<?, ?it/s] Eliminating: gen_size:   0%|          | 0/7 [00:00<?, ?it/s]Eliminating: ROOT_request:   0%|          | 0/7 [00:00<?, ?it/s]Eliminating: ROOT_request: 100%|██████████| 7/7 [00:00<00:00, 3742.05it/s]
+  0%|          | 0/7 [00:00<?, ?it/s]Finding Elimination Order: :   0%|          | 0/7 [00:00<?, ?it/s]Finding Elimination Order: : 100%|██████████| 7/7 [00:00<00:00, 29011.98it/s]
+  0%|          | 0/7 [00:00<?, ?it/s]Eliminating: gc:   0%|          | 0/7 [00:00<?, ?it/s]Eliminating: pod:   0%|          | 0/7 [00:00<?, ?it/s]Eliminating: ROOT_gen_size:   0%|          | 0/7 [00:00<?, ?it/s]Eliminating: avg_cpu:   0%|          | 0/7 [00:00<?, ?it/s]      Eliminating: request:   0%|          | 0/7 [00:00<?, ?it/s]Eliminating: gen_size:   0%|          | 0/7 [00:00<?, ?it/s]Eliminating: ROOT_request:   0%|          | 0/7 [00:00<?, ?it/s]Eliminating: ROOT_request: 100%|██████████| 7/7 [00:00<00:00, 3083.72it/s]
+  0%|          | 0/7 [00:00<?, ?it/s]Finding Elimination Order: :   0%|          | 0/7 [00:00<?, ?it/s]Finding Elimination Order: : 100%|██████████| 7/7 [00:00<00:00, 27542.33it/s]
+  0%|          | 0/7 [00:00<?, ?it/s]Eliminating: gc:   0%|          | 0/7 [00:00<?, ?it/s]Eliminating: ROOT_gen_size:   0%|          | 0/7 [00:00<?, ?it/s]Eliminating: ROOT_pod:   0%|          | 0/7 [00:00<?, ?it/s]     Eliminating: avg_cpu:   0%|          | 0/7 [00:00<?, ?it/s] Eliminating: request:   0%|          | 0/7 [00:00<?, ?it/s]Eliminating: gen_size:   0%|          | 0/7 [00:00<?, ?it/s]Eliminating: ROOT_request:   0%|          | 0/7 [00:00<?, ?it/s]Eliminating: ROOT_request: 100%|██████████| 7/7 [00:00<00:00, 3691.70it/s]
+  0%|          | 0/7 [00:00<?, ?it/s]Finding Elimination Order: :   0%|          | 0/7 [00:00<?, ?it/s]Finding Elimination Order: : 100%|██████████| 7/7 [00:00<00:00, 36700.16it/s]
+  0%|          | 0/7 [00:00<?, ?it/s]Eliminating: gc:   0%|          | 0/7 [00:00<?, ?it/s]Eliminating: pod:   0%|          | 0/7 [00:00<?, ?it/s]Eliminating: ROOT_pod:   0%|          | 0/7 [00:00<?, ?it/s]Eliminating: avg_cpu:   0%|          | 0/7 [00:00<?, ?it/s] Eliminating: request:   0%|          | 0/7 [00:00<?, ?it/s]Eliminating: gen_size:   0%|          | 0/7 [00:00<?, ?it/s]Eliminating: ROOT_request:   0%|          | 0/7 [00:00<?, ?it/s]Eliminating: ROOT_request: 100%|██████████| 7/7 [00:00<00:00, 3344.36it/s]
+  0%|          | 0/7 [00:00<?, ?it/s]Finding Elimination Order: :   0%|          | 0/7 [00:00<?, ?it/s]Finding Elimination Order: : 100%|██████████| 7/7 [00:00<00:00, 34299.21it/s]
+  0%|          | 0/7 [00:00<?, ?it/s]Eliminating: gc:   0%|          | 0/7 [00:00<?, ?it/s]Eliminating: pod:   0%|          | 0/7 [00:00<?, ?it/s]Eliminating: ROOT_gen_size:   0%|          | 0/7 [00:00<?, ?it/s]Eliminating: ROOT_pod:   0%|          | 0/7 [00:00<?, ?it/s]     Eliminating: avg_cpu:   0%|          | 0/7 [00:00<?, ?it/s] Eliminating: request:   0%|          | 0/7 [00:00<?, ?it/s]Eliminating: ROOT_request:   0%|          | 0/7 [00:00<?, ?it/s]Eliminating: ROOT_request: 100%|██████████| 7/7 [00:00<00:00, 3460.65it/s]
+[{'paths': [(0.9966666666666667,
+             [('ROOT_conn_pool', 0.99), ('conn_pool', 1), ('apt', 1)]),
+            (0.8790069763030277,
+             [('ROOT_conn_pool', 0.99),
+              ('conn_pool', 1),
+              ('avg_cpu', 0.5260279052121107),
+              ('apt', 1)]),
+            (0.7839598649723135,
+             [('ROOT_conn_pool', 0.99),
+              ('conn_pool', 1),
+              ('gc', 0.4037714196494569),
+              ('avg_cpu', 0.5260279052121107),
+              ('apt', 1)])],
+  'root_cause': 'ROOT_conn_pool',
+  'score': 0.99},
+ {'paths': [(0.7650957443081615,
+             [('ROOT_request', 0.6461522668010075),
+              ('request', 0.6491349661234771),
+              ('apt', 1)]),
+            (0.7053287845341488,
+             [('ROOT_request', 0.6461522668010075),
+              ('request', 0.6491349661234771),
+              ('avg_cpu', 0.5260279052121107),
+              ('apt', 1)]),
+            (0.6450173115572104,
+             [('ROOT_request', 0.6461522668010075),
+              ('request', 0.6491349661234771),
+              ('gc', 0.4037714196494569),
+              ('avg_cpu', 0.5260279052121107),
+              ('apt', 1)])],
+  'root_cause': 'ROOT_request',
+  'score': 0.6461522668010075},
+ {'paths': [(0.6478164038832953,
+             [('ROOT_pod', 0.5324891917895469),
+              ('pod', 0.5327485185315238),
+              ('avg_cpu', 0.5260279052121107),
+              ('apt', 1)]),
+            (0.5990074070365277,
+             [('ROOT_pod', 0.5324891917895469),
+              ('pod', 0.5327485185315238),
+              ('gc', 0.4037714196494569),
+              ('avg_cpu', 0.5260279052121107),
+              ('apt', 1)])],
+  'root_cause': 'ROOT_pod',
+  'score': 0.5324891917895469},
+ {'paths': [(0.6394322753420201,
+             [('ROOT_gen_size', 0.5156904910266921),
+              ('gen_size', 0.5160107051292776),
+              ('avg_cpu', 0.5260279052121107),
+              ('apt', 1)]),
+            (0.5923001042035074,
+             [('ROOT_gen_size', 0.5156904910266921),
+              ('gen_size', 0.5160107051292776),
+              ('gc', 0.4037714196494569),
+              ('avg_cpu', 0.5260279052121107),
+              ('apt', 1)])],
+  'root_cause': 'ROOT_gen_size',
+  'score': 0.5156904910266921}]

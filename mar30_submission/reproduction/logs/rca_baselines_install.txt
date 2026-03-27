@@ -1,0 +1,85 @@
+Collecting numpy
+  Using cached numpy-2.4.3-cp314-cp314-macosx_14_0_arm64.whl.metadata (6.6 kB)
+Collecting pandas
+  Using cached pandas-3.0.1-cp314-cp314-macosx_11_0_arm64.whl.metadata (79 kB)
+Collecting scikit-learn
+  Downloading scikit_learn-1.8.0-cp314-cp314-macosx_12_0_arm64.whl.metadata (11 kB)
+Collecting matplotlib
+  Using cached matplotlib-3.10.8-cp314-cp314-macosx_11_0_arm64.whl.metadata (52 kB)
+Collecting pyyaml
+  Downloading pyyaml-6.0.3-cp314-cp314-macosx_11_0_arm64.whl.metadata (2.4 kB)
+Collecting drain3
+  Downloading drain3-0.9.11.tar.gz (27 kB)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting more-itertools
+  Using cached more_itertools-10.8.0-py3-none-any.whl.metadata (39 kB)
+Collecting psutil
+  Downloading psutil-7.2.2-cp36-abi3-macosx_11_0_arm64.whl.metadata (22 kB)
+Collecting python-dateutil>=2.8.2 (from pandas)
+  Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+Collecting scipy>=1.10.0 (from scikit-learn)
+  Downloading scipy-1.17.1-cp314-cp314-macosx_14_0_arm64.whl.metadata (62 kB)
+Collecting joblib>=1.3.0 (from scikit-learn)
+  Using cached joblib-1.5.3-py3-none-any.whl.metadata (5.5 kB)
+Collecting threadpoolctl>=3.2.0 (from scikit-learn)
+  Using cached threadpoolctl-3.6.0-py3-none-any.whl.metadata (13 kB)
+Collecting contourpy>=1.0.1 (from matplotlib)
+  Using cached contourpy-1.3.3-cp314-cp314-macosx_11_0_arm64.whl.metadata (5.5 kB)
+Collecting cycler>=0.10 (from matplotlib)
+  Using cached cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+Collecting fonttools>=4.22.0 (from matplotlib)
+  Using cached fonttools-4.62.1-cp314-cp314-macosx_10_15_universal2.whl.metadata (117 kB)
+Collecting kiwisolver>=1.3.1 (from matplotlib)
+  Using cached kiwisolver-1.5.0-cp314-cp314-macosx_11_0_arm64.whl.metadata (5.1 kB)
+Collecting packaging>=20.0 (from matplotlib)
+  Using cached packaging-26.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting pillow>=8 (from matplotlib)
+  Using cached pillow-12.1.1-cp314-cp314-macosx_11_0_arm64.whl.metadata (8.8 kB)
+Collecting pyparsing>=3 (from matplotlib)
+  Using cached pyparsing-3.3.2-py3-none-any.whl.metadata (5.8 kB)
+Collecting jsonpickle==1.5.1 (from drain3)
+  Downloading jsonpickle-1.5.1-py2.py3-none-any.whl.metadata (6.6 kB)
+Collecting cachetools==4.2.1 (from drain3)
+  Downloading cachetools-4.2.1-py3-none-any.whl.metadata (4.6 kB)
+Collecting six>=1.5 (from python-dateutil>=2.8.2->pandas)
+  Using cached six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+Using cached numpy-2.4.3-cp314-cp314-macosx_14_0_arm64.whl (5.2 MB)
+Using cached pandas-3.0.1-cp314-cp314-macosx_11_0_arm64.whl (9.9 MB)
+Downloading scikit_learn-1.8.0-cp314-cp314-macosx_12_0_arm64.whl (8.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.1/8.1 MB 34.1 MB/s  0:00:00
+Using cached matplotlib-3.10.8-cp314-cp314-macosx_11_0_arm64.whl (8.2 MB)
+Downloading pyyaml-6.0.3-cp314-cp314-macosx_11_0_arm64.whl (173 kB)
+Downloading cachetools-4.2.1-py3-none-any.whl (12 kB)
+Downloading jsonpickle-1.5.1-py2.py3-none-any.whl (37 kB)
+Using cached more_itertools-10.8.0-py3-none-any.whl (69 kB)
+Downloading psutil-7.2.2-cp36-abi3-macosx_11_0_arm64.whl (129 kB)
+Using cached contourpy-1.3.3-cp314-cp314-macosx_11_0_arm64.whl (273 kB)
+Using cached cycler-0.12.1-py3-none-any.whl (8.3 kB)
+Using cached fonttools-4.62.1-cp314-cp314-macosx_10_15_universal2.whl (2.9 MB)
+Using cached joblib-1.5.3-py3-none-any.whl (309 kB)
+Using cached kiwisolver-1.5.0-cp314-cp314-macosx_11_0_arm64.whl (64 kB)
+Using cached packaging-26.0-py3-none-any.whl (74 kB)
+Using cached pillow-12.1.1-cp314-cp314-macosx_11_0_arm64.whl (4.7 MB)
+Using cached pyparsing-3.3.2-py3-none-any.whl (122 kB)
+Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+Downloading scipy-1.17.1-cp314-cp314-macosx_14_0_arm64.whl (20.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 20.3/20.3 MB 50.1 MB/s  0:00:00
+Using cached six-1.17.0-py2.py3-none-any.whl (11 kB)
+Using cached threadpoolctl-3.6.0-py3-none-any.whl (18 kB)
+Building wheels for collected packages: drain3
+  Building wheel for drain3 (pyproject.toml): started
+  Building wheel for drain3 (pyproject.toml): finished with status 'done'
+  Created wheel for drain3: filename=drain3-0.9.11-py3-none-any.whl size=24088 sha256=769b413fb0ec0e4d2238f7212c058ed5c8bb7feab592db7e7c211b0171db7570
+  Stored in directory: /Users/vatsaldp/Library/Caches/pip/wheels/35/35/66/dc76426ddaeb1de6db412de9fabdc376dddfcc7639acac2ff6
+Successfully built drain3
+Installing collected packages: threadpoolctl, six, pyyaml, pyparsing, psutil, pillow, packaging, numpy, more-itertools, kiwisolver, jsonpickle, joblib, fonttools, cycler, cachetools, scipy, python-dateutil, drain3, contourpy, scikit-learn, pandas, matplotlib
+
+Successfully installed cachetools-4.2.1 contourpy-1.3.3 cycler-0.12.1 drain3-0.9.11 fonttools-4.62.1 joblib-1.5.3 jsonpickle-1.5.1 kiwisolver-1.5.0 matplotlib-3.10.8 more-itertools-10.8.0 numpy-2.4.3 packaging-26.0 pandas-3.0.1 pillow-12.1.1 psutil-7.2.2 pyparsing-3.3.2 python-dateutil-2.9.0.post0 pyyaml-6.0.3 scikit-learn-1.8.0 scipy-1.17.1 six-1.17.0 threadpoolctl-3.6.0
+
+[notice] A new release of pip is available: 25.3 -> 26.0.1
+[notice] To update, run: pip install --upgrade pip

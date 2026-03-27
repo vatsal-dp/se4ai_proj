@@ -1,0 +1,118 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------------------< demo:idf-demo >----------------------------
+[INFO] Building idf-demo 1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/3.15.0/maven-compiler-plugin-3.15.0.pom
+Progress (1): 758 BProgress (1): 1.7 kBProgress (1): 3.5 kBProgress (1): 7.6 kBProgress (1): 9.1 kBProgress (1): 9.5 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/3.15.0/maven-compiler-plugin-3.15.0.pom (9.5 kB at 30 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/47/maven-plugins-47.pom
+Progress (1): 771 BProgress (1): 1.8 kBProgress (1): 4.3 kBProgress (1): 7.2 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/47/maven-plugins-47.pom (7.2 kB at 147 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/47/maven-parent-47.pom
+Progress (1): 716 BProgress (1): 1.6 kBProgress (1): 4.4 kBProgress (1): 8.4 kBProgress (1): 12 kB Progress (1): 16 kBProgress (1): 21 kBProgress (1): 23 kBProgress (1): 27 kBProgress (1): 28 kBProgress (1): 31 kBProgress (1): 34 kBProgress (1): 38 kBProgress (1): 39 kBProgress (1): 43 kBProgress (1): 45 kBProgress (1): 48 kBProgress (1): 53 kBProgress (1): 54 kB                   Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/47/maven-parent-47.pom (54 kB at 941 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/apache/37/apache-37.pom
+Progress (1): 733 BProgress (1): 1.6 kBProgress (1): 3.4 kBProgress (1): 5.1 kBProgress (1): 7.1 kBProgress (1): 12 kB Progress (1): 17 kBProgress (1): 19 kBProgress (1): 22 kBProgress (1): 24 kBProgress (1): 26 kB                   Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/apache/37/apache-37.pom (26 kB at 610 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.14.2/junit-bom-5.14.2.pom
+Progress (1): 908 BProgress (1): 2.2 kBProgress (1): 5.7 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.14.2/junit-bom-5.14.2.pom (5.7 kB at 142 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/3.15.0/maven-compiler-plugin-3.15.0.jar
+Progress (1): 0.9/84 kBProgress (1): 2.3/84 kBProgress (1): 3.6/84 kBProgress (1): 5.0/84 kBProgress (1): 6.4/84 kBProgress (1): 7.7/84 kBProgress (1): 9.1/84 kBProgress (1): 10/84 kB Progress (1): 12/84 kBProgress (1): 13/84 kBProgress (1): 15/84 kBProgress (1): 16/84 kBProgress (1): 17/84 kBProgress (1): 18/84 kBProgress (1): 20/84 kBProgress (1): 21/84 kBProgress (1): 22/84 kBProgress (1): 24/84 kBProgress (1): 28/84 kBProgress (1): 32/84 kBProgress (1): 37/84 kBProgress (1): 41/84 kBProgress (1): 45/84 kBProgress (1): 49/84 kBProgress (1): 53/84 kBProgress (1): 58/84 kBProgress (1): 62/84 kBProgress (1): 66/84 kBProgress (1): 70/84 kBProgress (1): 75/84 kBProgress (1): 79/84 kBProgress (1): 83/84 kBProgress (1): 84 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/3.15.0/maven-compiler-plugin-3.15.0.jar (84 kB at 1.3 MB/s)
+[INFO] 
+[INFO] >>> idflakies:2.0.1-SNAPSHOT:detect (default-cli) > test-compile @ idf-demo >>>
+[INFO] 
+[INFO] --- resources:3.4.0:resources (default-resources) @ idf-demo ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /Users/vatsaldp/Documents/se_proj/mar30_submission/reproduction/idf-demo/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ idf-demo ---
+Downloading from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm/9.9.1/asm-9.9.1.pom
+Progress (1): 1.3 kBProgress (1): 2.4 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm/9.9.1/asm-9.9.1.pom (2.4 kB at 54 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-utils/3.4.2/maven-shared-utils-3.4.2.pom
+Progress (1): 793 BProgress (1): 2.3 kBProgress (1): 4.3 kBProgress (1): 5.9 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-utils/3.4.2/maven-shared-utils-3.4.2.pom (5.9 kB at 26 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-components/39/maven-shared-components-39.pom
+Progress (1): 812 BProgress (1): 2.2 kBProgress (1): 3.2 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-components/39/maven-shared-components-39.pom (3.2 kB at 75 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/39/maven-parent-39.pom
+Progress (1): 724 BProgress (1): 1.9 kBProgress (1): 5.5 kBProgress (1): 9.8 kBProgress (1): 14 kB Progress (1): 19 kBProgress (1): 23 kBProgress (1): 25 kBProgress (1): 27 kBProgress (1): 29 kBProgress (1): 32 kBProgress (1): 35 kBProgress (1): 38 kBProgress (1): 41 kBProgress (1): 45 kBProgress (1): 48 kB                   Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/39/maven-parent-39.pom (48 kB at 905 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/apache/29/apache-29.pom
+Progress (1): 741 BProgress (1): 2.1 kBProgress (1): 3.9 kBProgress (1): 6.9 kBProgress (1): 12 kB Progress (1): 16 kBProgress (1): 19 kBProgress (1): 19 kBProgress (1): 21 kB                   Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/apache/29/apache-29.pom (21 kB at 460 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/commons-io/commons-io/2.11.0/commons-io-2.11.0.pom
+Progress (1): 764 BProgress (1): 2.1 kBProgress (1): 5.2 kBProgress (1): 7.8 kBProgress (1): 10 kB Progress (1): 12 kBProgress (1): 15 kBProgress (1): 16 kBProgress (1): 19 kBProgress (1): 20 kB                   Downloaded from central: https://repo.maven.apache.org/maven2/commons-io/commons-io/2.11.0/commons-io-2.11.0.pom (20 kB at 438 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/52/commons-parent-52.pom
+Progress (1): 703 BProgress (1): 1.8 kBProgress (1): 3.1 kBProgress (1): 4.6 kBProgress (1): 6.7 kBProgress (1): 8.1 kBProgress (1): 10 kB Progress (1): 11 kBProgress (1): 13 kBProgress (1): 15 kBProgress (1): 17 kBProgress (1): 21 kBProgress (1): 23 kBProgress (1): 27 kBProgress (1): 30 kBProgress (1): 34 kBProgress (1): 35 kBProgress (1): 38 kBProgress (1): 41 kBProgress (1): 43 kBProgress (1): 46 kBProgress (1): 49 kBProgress (1): 52 kBProgress (1): 55 kBProgress (1): 58 kBProgress (1): 60 kBProgress (1): 64 kBProgress (1): 72 kBProgress (1): 75 kBProgress (1): 78 kBProgress (1): 79 kB                   Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/52/commons-parent-52.pom (79 kB at 1.1 MB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.7.2/junit-bom-5.7.2.pom
+Progress (1): 912 BProgress (1): 4.1 kBProgress (1): 5.1 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.7.2/junit-bom-5.7.2.pom (5.1 kB at 131 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-java/1.5.2/plexus-java-1.5.2.pom
+Progress (1): 1.9 kBProgress (1): 4.1 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-java/1.5.2/plexus-java-1.5.2.pom (4.1 kB at 87 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-languages/1.5.2/plexus-languages-1.5.2.pom
+Progress (1): 1.4 kBProgress (1): 3.9 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-languages/1.5.2/plexus-languages-1.5.2.pom (3.9 kB at 94 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/24/plexus-24.pom
+Progress (1): 689 BProgress (1): 2.5 kBProgress (1): 6.4 kBProgress (1): 8.8 kBProgress (1): 11 kB Progress (1): 12 kBProgress (1): 16 kBProgress (1): 21 kBProgress (1): 23 kBProgress (1): 28 kBProgress (1): 31 kB                   Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/24/plexus-24.pom (31 kB at 654 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-api/2.16.2/plexus-compiler-api-2.16.2.pom
+Progress (1): 1.4 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-api/2.16.2/plexus-compiler-api-2.16.2.pom (1.4 kB at 27 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler/2.16.2/plexus-compiler-2.16.2.pom
+Progress (1): 1.2 kBProgress (1): 4.6 kBProgress (1): 7.5 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler/2.16.2/plexus-compiler-2.16.2.pom (7.5 kB at 161 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/25/plexus-25.pom
+Progress (1): 690 BProgress (1): 2.5 kBProgress (1): 6.4 kBProgress (1): 8.8 kBProgress (1): 11 kB Progress (1): 12 kBProgress (1): 17 kBProgress (1): 21 kBProgress (1): 23 kBProgress (1): 28 kBProgress (1): 31 kB                   Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/25/plexus-25.pom (31 kB at 418 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.14.1/junit-bom-5.14.1.pom
+Progress (1): 908 BProgress (1): 4.1 kBProgress (1): 5.7 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.14.1/junit-bom-5.14.1.pom (5.7 kB at 116 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-manager/2.16.2/plexus-compiler-manager-2.16.2.pom
+Progress (1): 1.3 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-manager/2.16.2/plexus-compiler-manager-2.16.2.pom (1.3 kB at 26 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-javac/2.16.2/plexus-compiler-javac-2.16.2.pom
+Progress (1): 1.3 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-javac/2.16.2/plexus-compiler-javac-2.16.2.pom (1.3 kB at 28 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compilers/2.16.2/plexus-compilers-2.16.2.pom
+Progress (1): 1.6 kBProgress (1): 1.6 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compilers/2.16.2/plexus-compilers-2.16.2.pom (1.6 kB at 31 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm/9.9.1/asm-9.9.1.jar
+Progress (1): 7.7/126 kBProgress (1): 16/126 kB Progress (1): 24/126 kBProgress (1): 40/126 kBProgress (1): 57/126 kBProgress (1): 73/126 kBProgress (1): 90/126 kBProgress (1): 106/126 kBProgress (1): 122/126 kBProgress (1): 126 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm/9.9.1/asm-9.9.1.jar (126 kB at 2.0 MB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-utils/3.4.2/maven-shared-utils-3.4.2.jar
+Downloading from central: https://repo.maven.apache.org/maven2/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-java/1.5.2/plexus-java-1.5.2.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-api/2.16.2/plexus-compiler-api-2.16.2.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-manager/2.16.2/plexus-compiler-manager-2.16.2.jar
+Progress (1): 7.7/151 kBProgress (1): 16/151 kB Progress (1): 24/151 kBProgress (1): 40/151 kBProgress (1): 57/151 kBProgress (1): 73/151 kBProgress (1): 90/151 kBProgress (1): 106/151 kBProgress (1): 122/151 kBProgress (1): 139/151 kBProgress (1): 151 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-utils/3.4.2/maven-shared-utils-3.4.2.jar (151 kB at 2.5 MB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-javac/2.16.2/plexus-compiler-javac-2.16.2.jar
+Progress (1): 3.4/30 kBProgress (1): 20/30 kB Progress (1): 30 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-javac/2.16.2/plexus-compiler-javac-2.16.2.jar (30 kB at 287 kB/s)
+Progress (1): 0.9/57 kBProgress (1): 2.3/57 kBProgress (1): 3.6/57 kBProgress (1): 5.0/57 kBProgress (1): 6.4/57 kBProgress (1): 7.7/57 kBProgress (1): 8.2/57 kBProgress (1): 9.6/57 kBProgress (1): 11/57 kB Progress (1): 12/57 kBProgress (1): 14/57 kBProgress (1): 15/57 kBProgress (1): 16/57 kBProgress (1): 18/57 kBProgress (1): 19/57 kBProgress (1): 21/57 kBProgress (1): 22/57 kBProgress (1): 23/57 kBProgress (1): 25/57 kBProgress (1): 26/57 kBProgress (1): 27/57 kBProgress (1): 29/57 kBProgress (1): 30/57 kBProgress (1): 31/57 kBProgress (1): 33/57 kBProgress (1): 34/57 kBProgress (1): 36/57 kBProgress (1): 37/57 kBProgress (1): 38/57 kBProgress (1): 40/57 kBProgress (2): 40/57 kB | 0.9/29 kBProgress (2): 41/57 kB | 0.9/29 kBProgress (2): 42/57 kB | 0.9/29 kBProgress (2): 42/57 kB | 2.3/29 kBProgress (2): 42/57 kB | 3.6/29 kBProgress (2): 42/57 kB | 5.0/29 kBProgress (2): 42/57 kB | 6.4/29 kBProgress (2): 42/57 kB | 7.7/29 kBProgress (2): 42/57 kB | 9.1/29 kBProgress (2): 42/57 kB | 10/29 kB Progress (2): 42/57 kB | 12/29 kBProgress (2): 42/57 kB | 13/29 kBProgress (2): 42/57 kB | 15/29 kBProgress (2): 42/57 kB | 16/29 kBProgress (2): 42/57 kB | 17/29 kBProgress (2): 44/57 kB | 17/29 kBProgress (2): 44/57 kB | 19/29 kBProgress (2): 44/57 kB | 20/29 kBProgress (2): 45/57 kB | 20/29 kBProgress (2): 47/57 kB | 20/29 kBProgress (2): 48/57 kB | 20/29 kBProgress (2): 48/57 kB | 21/29 kBProgress (2): 48/57 kB | 23/29 kBProgress (2): 49/57 kB | 23/29 kBProgress (2): 49/57 kB | 24/29 kBProgress (2): 51/57 kB | 24/29 kBProgress (2): 51/57 kB | 26/29 kBProgress (2): 52/57 kB | 26/29 kBProgress (2): 52/57 kB | 27/29 kBProgress (2): 53/57 kB | 27/29 kBProgress (2): 53/57 kB | 28/29 kBProgress (2): 55/57 kB | 28/29 kBProgress (2): 55/57 kB | 29/29 kBProgress (2): 55/57 kB | 29 kB   Progress (2): 57 kB | 29 kB   Progress (3): 57 kB | 29 kB | 0.9/5.2 kBProgress (3): 57 kB | 29 kB | 2.3/5.2 kBProgress (3): 57 kB | 29 kB | 3.6/5.2 kBProgress (3): 57 kB | 29 kB | 5.0/5.2 kBProgress (3): 57 kB | 29 kB | 5.2 kB    Progress (4): 57 kB | 29 kB | 5.2 kB | 0.9/327 kB                                                 Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-java/1.5.2/plexus-java-1.5.2.jar (57 kB at 377 kB/s)
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-api/2.16.2/plexus-compiler-api-2.16.2.jar (29 kB at 193 kB/s)
+Progress (2): 5.2 kB | 2.3/327 kBProgress (2): 5.2 kB | 3.6/327 kBProgress (2): 5.2 kB | 5.0/327 kBProgress (2): 5.2 kB | 6.4/327 kBProgress (2): 5.2 kB | 7.7/327 kBProgress (2): 5.2 kB | 9.1/327 kBProgress (2): 5.2 kB | 10/327 kB Progress (2): 5.2 kB | 12/327 kBProgress (2): 5.2 kB | 13/327 kB                                Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-manager/2.16.2/plexus-compiler-manager-2.16.2.jar (5.2 kB at 34 kB/s)
+Progress (1): 15/327 kBProgress (1): 16/327 kBProgress (1): 17/327 kBProgress (1): 19/327 kBProgress (1): 20/327 kBProgress (1): 21/327 kBProgress (1): 23/327 kBProgress (1): 24/327 kBProgress (1): 26/327 kBProgress (1): 27/327 kBProgress (1): 28/327 kBProgress (1): 30/327 kBProgress (1): 31/327 kBProgress (1): 32/327 kBProgress (1): 34/327 kBProgress (1): 35/327 kBProgress (1): 36/327 kBProgress (1): 38/327 kBProgress (1): 39/327 kBProgress (1): 41/327 kBProgress (1): 42/327 kBProgress (1): 43/327 kBProgress (1): 45/327 kBProgress (1): 46/327 kBProgress (1): 47/327 kBProgress (1): 49/327 kBProgress (1): 50/327 kBProgress (1): 52/327 kBProgress (1): 53/327 kBProgress (1): 54/327 kBProgress (1): 56/327 kBProgress (1): 60/327 kBProgress (1): 61/327 kBProgress (1): 65/327 kBProgress (1): 69/327 kBProgress (1): 73/327 kBProgress (1): 78/327 kBProgress (1): 82/327 kBProgress (1): 86/327 kBProgress (1): 90/327 kBProgress (1): 95/327 kBProgress (1): 99/327 kBProgress (1): 103/327 kBProgress (1): 107/327 kBProgress (1): 111/327 kBProgress (1): 116/327 kBProgress (1): 120/327 kBProgress (1): 124/327 kBProgress (1): 128/327 kBProgress (1): 133/327 kBProgress (1): 137/327 kBProgress (1): 141/327 kBProgress (1): 145/327 kBProgress (1): 150/327 kBProgress (1): 154/327 kBProgress (1): 158/327 kBProgress (1): 162/327 kBProgress (1): 166/327 kBProgress (1): 171/327 kBProgress (1): 175/327 kBProgress (1): 179/327 kBProgress (1): 183/327 kBProgress (1): 188/327 kBProgress (1): 192/327 kBProgress (1): 196/327 kBProgress (1): 200/327 kBProgress (1): 204/327 kBProgress (1): 209/327 kBProgress (1): 213/327 kBProgress (1): 217/327 kBProgress (1): 221/327 kBProgress (1): 238/327 kBProgress (1): 254/327 kBProgress (1): 271/327 kBProgress (1): 287/327 kBProgress (1): 303/327 kBProgress (1): 320/327 kBProgress (1): 323/327 kBProgress (1): 327 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar (327 kB at 1.3 MB/s)
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- resources:3.4.0:testResources (default-testResources) @ idf-demo ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /Users/vatsaldp/Documents/se_proj/mar30_submission/reproduction/idf-demo/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ idf-demo ---
+[INFO] Recompiling the module because of changed source code.
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 1 source file with javac [debug target 1.8] to target/test-classes
+[WARNING] bootstrap class path is not set in conjunction with -source 8
+  not setting the bootstrap class path may lead to class files that cannot run on JDK 8
+    --release 8 is recommended instead of -source 8 -target 1.8 because it sets the bootstrap class path automatically
+[WARNING] source value 8 is obsolete and will be removed in a future release
+[WARNING] target value 8 is obsolete and will be removed in a future release
+[WARNING] To suppress warnings about obsolete options, use -Xlint:-options.
+[INFO] 
+[INFO] <<< idflakies:2.0.1-SNAPSHOT:detect (default-cli) < test-compile @ idf-demo <<<
+[INFO] 
+[INFO] 
+[INFO] --- idflakies:2.0.1-SNAPSHOT:detect (default-cli) @ idf-demo ---
+INFO: Locating tests...
+INFO: Located 2 tests. Time taken: 0.029000043869018555 seconds
+INFO: No timeout specified. Using randomize.rounds: 1
+INFO: ROUNDS_CALCULATED: Giving demo:idf-demo:1.0-SNAPSHOT 1 rounds to run for reverse
+INFO: Using original order in path: /Users/vatsaldp/Documents/se_proj/mar30_submission/reproduction/idf-demo/.dtfixingtools/original-order
+INFO: Getting original order by parsing logs. ignoreExisting set to: false
+INFO: Using original order in path: /Users/vatsaldp/Documents/se_proj/mar30_submission/reproduction/idf-demo/.dtfixingtools/original-order
+[INFO] Getting original results (2 tests).
+INFO: Created dependent test detector (class edu.illinois.cs.dt.tools.detection.detectors.ReverseDetector).
+Verified demo.ODFlakeTest.polluted, status: expected PASS, got PASS
+Verified demo.ODFlakeTest.polluted, status: expected ERROR, got ERROR
+[INFO] Found 1 tests in round 1 of 1 (0.0 seconds elapsed (0.8 total), 0.0 seconds remaining).
+
+[INFO] Found 1 tests, writing list to /Users/vatsaldp/Documents/se_proj/mar30_submission/reproduction/idf-demo/.dtfixingtools/detection-results/list.txt and dt lists to /Users/vatsaldp/Documents/se_proj/mar30_submission/reproduction/idf-demo/.dtfixingtools/detection-results/flaky-lists.json
+TRY_COPY_ALL_FAILING_TEST_OUTPUT
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  4.264 s
+[INFO] Finished at: 2026-03-26T20:18:53-04:00
+[INFO] ------------------------------------------------------------------------

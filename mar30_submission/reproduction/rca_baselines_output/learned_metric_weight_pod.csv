@@ -1,0 +1,7 @@
+,ranking,metric,weight
+0,1,transmit_bandwidth,0.0
+1,2,received_bandwidth,0.0
+2,3,rate_received_packets,0.0
+3,4,rate_transmitted_packets,0.0
+4,5,memory_usage,0.0
+5,6,cpu_usage,0.0
