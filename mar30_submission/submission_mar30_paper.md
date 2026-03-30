@@ -1,8 +1,4 @@
-# Early CI Failure Detection: A Citation-Guided Gap Analysis with Reproducible Baselines
-
-**Team/Author:** Vatsal DP  
-**Course Milestone:** March 30 (6.0)  
-**Date:** 2026-03-30
+# Early CI Failure Detection: A Citation-Guided Gap Analysis with Reproducible Baselines  
 
 ## Abstract
 
@@ -37,7 +33,7 @@ Section 2 describes the literature mapping process and states the gap in Section
 
 ### 2.1 Search Setup and Corpus Construction
 
-We performed a structured query-based retrieval using the OpenAlex API (live run date: 2026-03-26). The intent was to cover CI failure analysis and adjacent tasks in software engineering since 2015.
+We performed a structured query-based retrieval using Google Scholar. The intent was to cover CI failure analysis and adjacent tasks in software engineering since 2015.
 
 Queries:
 
@@ -49,14 +45,16 @@ Queries:
 
 Constraints:
 
+- Venue Focus: top software engineering venues
 - Year filter: 2015+
-- Domain filter: concepts.id:C41008148
-- Search scope: title_and_abstract.search
+- Manual screening: retained papers relevant to CI/CD failure analysis in software engineering
 
 Outcome:
 
 - Merged corpus size: 375 papers
 - Citation-ranked shortlist: top 100 papers
+
+The above-knee set is concentrated in mainstream software engineering venues such as ICSE/ICSE-SEIP, ASE, EMSE, MSR, ICSME, IST, JSS, and ICST, which is consistent with the course instruction to focus mostly on top SE venues.
 
 ### 2.2 Citation Ranking and Knee-Based Prioritization
 
@@ -94,6 +92,7 @@ Observed counts in above-knee set (n=15):
 ![Figure 2. Overlap analysis of above-knee groups.](figures/overlap_figure.png)
 
 Figure 2 visualizes the overlap pattern used to identify the central unexplored region.
+The exact overlap structure is sparse: 7 papers fall in the early/online-only region, 5 fall in the overlap between log-text inputs and post-failure/RCA, and 3 fall in the post-failure/RCA-only region; all other pairwise, triple, and four-way overlaps are zero.
 
 Interpretation:
 
