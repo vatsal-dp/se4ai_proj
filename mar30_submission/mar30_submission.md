@@ -3,17 +3,34 @@
 **Topic:** Predictive Build Failure Analysis in CI/CD Pipelines  
 **Date:** 2026-03-26
 
-## 1. Problem Framing
+## 1 Introduction
 
-Modern CI/CD pipelines generate high-volume signals (build outcomes, test results, logs, and metadata), but teams still spend significant time reacting to failures after resources are already consumed. This study maps how AI methods are currently used to detect, classify, and explain build failures in CI workflows, then identifies whether early detection from partial pipeline evidence is underexplored relative to post-failure diagnosis.
+Modern CI/CD systems expose teams to a large decision space: data artifacts, model choices, and deployment-time constraints all interact in ways that affect failure prediction quality and response cost. While this flexibility is useful, it creates a practical engineering problem: default settings and manual tuning do not scale when pipelines are large and fast-moving.
 
-## 2. Research Questions
+In this setting, delayed diagnosis is expensive. Teams often get high-quality explanations after a failure has already consumed compute and developer attention. This motivates a stronger emphasis on earlier signals and earlier intervention. In short, for CI failure handling, configurability without data-driven decision support becomes a liability.
+
+Accordingly, this submission studies where current high-impact literature places its effort, then uses runnable baseline reproductions to anchor a feasible semester direction. The specific focus is whether **early/online failure detection** is underrepresented relative to **post-failure diagnosis/RCA**.
+
+### Research Questions
 
 1. How are AI methods currently applied to CI/CD failure-related tasks (prediction, diagnosis, prioritization, optimization)?
 2. Within high-impact literature, how much emphasis is placed on **post-failure explanation** versus **early/online detection**?
-3. Can a practical semester project be anchored on a reproducible baseline artifact while targeting early, lower-cost detection in CI/CD settings?
+3. Can a practical semester project be anchored on reproducible baseline artifacts while targeting earlier and lower-cost CI failure detection?
 
-## 3. Search Strategy and Data Collection
+### Contributions (for 6.0)
+
+- A citation-ranked literature mapping pipeline (375 merged papers, top-100 ranked, knee-selected above-knee set).
+- A structured above-knee classification with overlap analysis that surfaces an early-detection gap.
+- End-to-end baseline reproduction evidence across four tools/papers (FastPC baseline, PyRCA, iDFlakies, and DL-CIBuild).
+- A concrete next-step experiment direction grounded in reproducible artifacts already generated in this repository.
+
+### Roadmap
+
+Section 2 summarizes the literature mapping process and states the gap in Section 2.3; Section 3 presents baseline reproduction evidence; Section 4 outlines the post-6.0 experimental direction.
+
+## 2 Literature Mapping and Gap Analysis
+
+### 2.1 Search Strategy and Data Collection
 
 Citation metadata source: **OpenAlex API (live query run on 2026-03-26)**.
 
@@ -34,9 +51,9 @@ Artifacts:
 - Raw merged rows: `data/papers_raw.csv`
 - De-duplicated top 100: `data/top100_papers.csv`
 
-## 4. Knee Analysis and Reading Set
+### 2.2 Citation Ranking, Knee Analysis, and Reading Set
 
-Knee method: maximum-distance bend from line connecting first and last points of the sorted top-100 citation curve.
+To prioritize the most influential papers while keeping the review tractable, papers were ranked by citation count and a knee heuristic was used on the top-100 curve (maximum-distance bend from the line connecting first and last points).
 
 Computed output:
 - Top list size: `100`
@@ -49,7 +66,7 @@ Artifacts:
 - Knee figure: `figures/knee_plot.png`
 - Frozen above-knee set: `data/above_knee_set.csv`
 
-## 5. Above-Knee Classification and Overlap
+### 2.3 A Gap in the Literature
 
 For each above-knee paper, a reading matrix was prepared with:
 - input artifact
@@ -67,9 +84,9 @@ Artifacts:
 - Detailed per-paper notes: `data/above_knee_detailed_notes.md`
 - 4-group literal Venn diagram + exact overlap counts: `figures/overlap_figure.png`
 
-Note: if metadata did not include an abstract for a paper, the matrix and notes mark the excerpt as “Not available in retrieved metadata.”
+Note: if metadata did not include an abstract for a paper, the matrix and notes mark the excerpt as "Not available in retrieved metadata."
 
-4-group overlap groups:
+Grouping dimensions used for overlap analysis:
 - log-text inputs
 - LLM/generative methods
 - early/online detection
@@ -81,13 +98,9 @@ Current above-knee snapshot (n=15):
 - Early/online hits: `7`
 - Post-failure/RCA hits: `8`
 
-Interpretation: highly cited CI literature in this set is dominated by test-prioritization/optimization and post-failure diagnosis. Explicit LLM-centered CI methods remain absent from the above-knee region, supporting the claim that this area is still emerging.
+This overlap pattern indicates that high-impact CI-related work is still weighted toward post-hoc diagnosis and test optimization, with no LLM-centered entries in the above-knee set. The central unexplored region for this project is therefore **early CI failure detection from partial and inexpensive signals**, where lead-time and runtime cost are first-class constraints.
 
-## 6. Candidate Gap (Unexplored Region)
-
-The above-knee corpus is concentrated on post-hoc failure analysis, flaky-test behavior, and test-selection efficiency. A reasonable underexplored direction is **early CI failure detection from partial logs and early pipeline signals**, especially with lightweight AI models where runtime and cost are explicit optimization targets (instead of only final classification accuracy).
-
-## 7. Reproduction Sprint and Baseline Evidence
+## 3 Reproduction Sprint and Baseline Evidence
 
 Three candidates were smoke-tested in the requested order:
 1. `KnowledgeDiscovery/rca_baselines`
@@ -124,7 +137,7 @@ Artifacts:
 - DL-CIBuild rerun script: `reproduction/scripts/run_dl_cibuild_rank12.sh`
 - Command logs: `reproduction/logs/*`
 
-## 8. Next-Step Experiment Direction (Post-6.0)
+## 4 Next-Step Experiment Direction (Post-6.0)
 
 With 6.0 evidence in place (question + mapped literature + runnable baseline), the next step is to build an **early-warning CI detector** that predicts likely failure before full pipeline completion, then compare:
 - detection lead time,
