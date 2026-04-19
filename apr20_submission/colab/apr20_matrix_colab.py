@@ -25,17 +25,20 @@ import apr20_pilot_colab as pilot
 DEFAULT_EXPERIMENT_NAME = "apr20_logreg_parameter_sensitivity"
 DEFAULT_REPEATS = 8
 DEFAULT_BASE_SEED = 42
+DEFAULT_DL_REPEATS = -1
 DEFAULT_TASKS = ("majority_class", "logistic_regression")
 TASK_CHOICES = ("majority_class", "logistic_regression", "dl_cibuild_default")
 DEFAULT_MAX_FOLDS = pilot.DEFAULT_NUM_FOLDS
 DEFAULT_PROGRESS_EVERY = 0
 DEFAULT_HEARTBEAT_SEC = 120
+DEFAULT_DL_TUNER = "default"
 
 METRIC_FIELDS = ["auc", "f1", "accuracy", "precision", "recall"]
 CSV_COLUMNS = [
     "experiment",
     "setup",
     "repeat",
+    "dl_repeat",
     "seed",
     "model",
     "fold",
@@ -54,6 +57,7 @@ CSV_COLUMNS = [
     "logreg_class_weight",
     "decision_threshold",
     "train_fraction",
+    "dl_tuner",
 ]
 
 
@@ -168,6 +172,23 @@ def parse_args() -> argparse.Namespace:
         type=int,
         default=DEFAULT_BASE_SEED,
         help="Base seed for repeat #1. Repeat i uses seed=base_seed+(i-1).",
+    )
+    parser.add_argument(
+        "--dl-repeats",
+        type=int,
+        default=DEFAULT_DL_REPEATS,
+        help="DL-CIBuild repeats per setup. Use <=0 to inherit --repeats.",
+    )
+    parser.add_argument(
+        "--dl-base-seed",
+        type=int,
+        default=None,
+        help="Base seed for DL-CIBuild repeats. Defaults to --base-seed.",
+    )
+    parser.add_argument(
+        "--dl-tuner",
+        default=DEFAULT_DL_TUNER,
+        help="DL-CIBuild tuner option (default, tpe, ga, pso, bohb, rs).",
     )
     parser.add_argument(
         "--max-folds",
@@ -347,6 +368,8 @@ def build_summary(
     args: argparse.Namespace,
     setup_variants: Sequence[SetupVariant],
     selected_tasks: Sequence[str],
+    dl_repeats: int,
+    dl_base_seed: int,
     dataset_path: Path,
     dataset_rows: int,
     fold_size: int,
@@ -372,6 +395,9 @@ def build_summary(
             "tasks": list(selected_tasks),
             "repeats_per_setup": int(args.repeats),
             "base_seed": int(args.base_seed),
+            "dl_repeats_per_setup": int(dl_repeats),
+            "dl_base_seed": int(dl_base_seed),
+            "dl_tuner": str(args.dl_tuner),
             "max_folds": int(args.max_folds),
             "progress_every": int(args.progress_every),
             "runner_heartbeat_sec": int(args.runner_heartbeat_sec),
@@ -410,6 +436,15 @@ def main() -> int:
         raise ValueError("--repeats must be > 0.")
     if args.max_folds <= 0:
         raise ValueError("--max-folds must be > 0.")
+    dl_repeats = int(args.repeats if args.dl_repeats <= 0 else args.dl_repeats)
+    if dl_repeats <= 0:
+        raise ValueError("--dl-repeats must be > 0 (or <=0 to inherit --repeats).")
+    dl_base_seed = int(args.base_seed if args.dl_base_seed is None else args.dl_base_seed)
+    dl_tuner = str(args.dl_tuner).strip().lower()
+    if dl_tuner not in {"default", "tpe", "ga", "pso", "bohb", "rs"}:
+        raise ValueError(
+            "--dl-tuner must be one of: default, tpe, ga, pso, bohb, rs."
+        )
 
     logger = pilot.RunLogger()
     pilot.set_determinism(args.base_seed)
@@ -424,6 +459,9 @@ def main() -> int:
     logger.log(f"Selected tasks: {', '.join(selected_tasks)}")
     logger.log(f"Selected setups: {', '.join(setup.name for setup in setup_variants)}")
     logger.log(f"Repeats per setup: {args.repeats}")
+    logger.log(
+        f"DL repeats per setup: {dl_repeats} (dl_base_seed={dl_base_seed}, dl_tuner={dl_tuner})"
+    )
     logger.log(
         "Shared speed caps: "
         f"max_folds={args.max_folds}, progress_every={args.progress_every}, "
@@ -442,6 +480,9 @@ def main() -> int:
 
     rows: List[Dict[str, Any]] = []
     last_heartbeat_ts = time.monotonic()
+    has_non_dl_tasks = any(
+        task in selected_tasks for task in ("majority_class", "logistic_regression")
+    )
 
     for setup in setup_variants:
         logger.log(
@@ -453,74 +494,92 @@ def main() -> int:
             f"train_fraction={setup.train_fraction}"
         )
 
-        for repeat_index in range(1, args.repeats + 1):
-            run_seed = int(args.base_seed + repeat_index - 1)
-            pilot.set_determinism(run_seed)
-            repeat_start = time.perf_counter()
-            logger.log(
-                f"Running setup={setup.name}, repeat={repeat_index}/{args.repeats}, seed={run_seed}"
-            )
-
-            for fold_index, (train_df, test_df) in enumerate(
-                zip(train_sets, test_sets), start=1
-            ):
-                train_slice = maybe_trim_train_history(
-                    train_df=train_df,
-                    train_fraction=setup.train_fraction,
+        if has_non_dl_tasks:
+            for repeat_index in range(1, args.repeats + 1):
+                run_seed = int(args.base_seed + repeat_index - 1)
+                pilot.set_determinism(run_seed)
+                repeat_start = time.perf_counter()
+                logger.log(
+                    f"Running setup={setup.name}, repeat={repeat_index}/{args.repeats}, seed={run_seed}"
                 )
 
-                base = {
-                    "experiment": args.experiment_name,
-                    "setup": setup.name,
-                    "repeat": repeat_index,
-                    "seed": run_seed,
-                    "fold": fold_index,
-                    "train_rows": int(len(train_slice)),
-                    "test_rows": int(len(test_df)),
-                    "logreg_c": setup.logreg_c,
-                    "logreg_max_iter": setup.logreg_max_iter,
-                    "logreg_class_weight": setup.logreg_class_weight,
-                    "decision_threshold": setup.decision_threshold,
-                    "train_fraction": setup.train_fraction,
-                }
-
-                fold_rows = run_non_dl_tasks_for_fold(
-                    setup=setup,
-                    tasks=selected_tasks,
-                    train_df=train_slice,
-                    test_df=test_df,
-                    seed=run_seed,
-                    fold_index=fold_index,
-                    logger=logger,
-                )
-                rows.extend({**base, **row} for row in fold_rows)
-
-                if args.progress_every > 0 and (fold_index % args.progress_every == 0):
-                    logger.log(
-                        f"Progress setup={setup.name} repeat={repeat_index}: "
-                        f"completed fold {fold_index}/{len(train_sets)}"
+                for fold_index, (train_df, test_df) in enumerate(
+                    zip(train_sets, test_sets), start=1
+                ):
+                    train_slice = maybe_trim_train_history(
+                        train_df=train_df,
+                        train_fraction=setup.train_fraction,
                     )
 
-                last_heartbeat_ts = maybe_emit_heartbeat(
-                    logger=logger,
-                    heartbeat_sec=args.runner_heartbeat_sec,
-                    last_heartbeat_ts=last_heartbeat_ts,
-                    context=(
-                        f"setup={setup.name}, repeat={repeat_index}/{args.repeats}, "
-                        f"fold={fold_index}/{len(train_sets)}"
-                    ),
+                    base = {
+                        "experiment": args.experiment_name,
+                        "setup": setup.name,
+                        "repeat": repeat_index,
+                        "dl_repeat": None,
+                        "seed": run_seed,
+                        "fold": fold_index,
+                        "train_rows": int(len(train_slice)),
+                        "test_rows": int(len(test_df)),
+                        "logreg_c": setup.logreg_c,
+                        "logreg_max_iter": setup.logreg_max_iter,
+                        "logreg_class_weight": setup.logreg_class_weight,
+                        "decision_threshold": setup.decision_threshold,
+                        "train_fraction": setup.train_fraction,
+                        "dl_tuner": None,
+                    }
+
+                    fold_rows = run_non_dl_tasks_for_fold(
+                        setup=setup,
+                        tasks=selected_tasks,
+                        train_df=train_slice,
+                        test_df=test_df,
+                        seed=run_seed,
+                        fold_index=fold_index,
+                        logger=logger,
+                    )
+                    rows.extend({**base, **row} for row in fold_rows)
+
+                    if args.progress_every > 0 and (fold_index % args.progress_every == 0):
+                        logger.log(
+                            f"Progress setup={setup.name} repeat={repeat_index}: "
+                            f"completed fold {fold_index}/{len(train_sets)}"
+                        )
+
+                    last_heartbeat_ts = maybe_emit_heartbeat(
+                        logger=logger,
+                        heartbeat_sec=args.runner_heartbeat_sec,
+                        last_heartbeat_ts=last_heartbeat_ts,
+                        context=(
+                            f"setup={setup.name}, repeat={repeat_index}/{args.repeats}, "
+                            f"fold={fold_index}/{len(train_sets)}"
+                        ),
+                    )
+
+                repeat_duration = time.perf_counter() - repeat_start
+                logger.log(
+                    f"Completed setup={setup.name}, repeat={repeat_index} "
+                    f"in {repeat_duration:.2f}s"
                 )
 
-            if "dl_cibuild_default" in selected_tasks:
+        if "dl_cibuild_default" in selected_tasks:
+            for dl_repeat_index in range(1, dl_repeats + 1):
+                dl_seed = int(dl_base_seed + dl_repeat_index - 1)
+                dl_start = time.perf_counter()
+                logger.log(
+                    f"Running setup={setup.name}, dl_repeat={dl_repeat_index}/{dl_repeats}, "
+                    f"seed={dl_seed}, tuner={dl_tuner}"
+                )
+
                 if args.skip_dl_cibuild:
                     dl_rows = pilot.dl_not_run_rows(
-                        "Skipped by --skip-dl-cibuild flag.", run_seed
+                        "Skipped by --skip-dl-cibuild flag.", dl_seed
                     )
                 else:
                     dl_rows = pilot.run_dl_cibuild_default(
                         repo_root=repo_root,
-                        seed=run_seed,
+                        seed=dl_seed,
                         logger=logger,
+                        tuner_option=dl_tuner,
                     )
 
                 for row in dl_rows:
@@ -534,22 +593,23 @@ def main() -> int:
                         {
                             "experiment": args.experiment_name,
                             "setup": setup.name,
-                            "repeat": repeat_index,
-                            "seed": run_seed,
+                            "repeat": dl_repeat_index,
+                            "dl_repeat": dl_repeat_index,
                             "logreg_c": setup.logreg_c,
                             "logreg_max_iter": setup.logreg_max_iter,
                             "logreg_class_weight": setup.logreg_class_weight,
                             "decision_threshold": setup.decision_threshold,
                             "train_fraction": setup.train_fraction,
+                            "dl_tuner": dl_tuner,
                             **row,
                         }
                     )
 
-            repeat_duration = time.perf_counter() - repeat_start
-            logger.log(
-                f"Completed setup={setup.name}, repeat={repeat_index} "
-                f"in {repeat_duration:.2f}s"
-            )
+                dl_duration = time.perf_counter() - dl_start
+                logger.log(
+                    f"Completed setup={setup.name}, dl_repeat={dl_repeat_index} "
+                    f"in {dl_duration:.2f}s"
+                )
 
     metrics_df = pd.DataFrame(rows)
     for column in CSV_COLUMNS:
@@ -568,6 +628,8 @@ def main() -> int:
         args=args,
         setup_variants=setup_variants,
         selected_tasks=selected_tasks,
+        dl_repeats=dl_repeats,
+        dl_base_seed=dl_base_seed,
         dataset_path=dataset_path,
         dataset_rows=len(df),
         fold_size=fold_size,

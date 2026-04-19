@@ -134,6 +134,30 @@ def set_determinism(seed: int) -> None:
     np.random.seed(seed)
 
 
+def set_dl_determinism(seed: int) -> None:
+    # Python/NumPy seeding for legacy DL-CIBuild codepaths.
+    random.seed(seed)
+    np.random.seed(seed)
+    os.environ["PYTHONHASHSEED"] = str(seed)
+    os.environ.setdefault("TF_DETERMINISTIC_OPS", "1")
+
+    # TensorFlow seeding when available.
+    try:
+        import tensorflow as tf  # type: ignore
+
+        try:
+            tf.keras.utils.set_random_seed(seed)
+        except Exception:
+            tf.random.set_seed(seed)
+
+        try:
+            tf.config.experimental.enable_op_determinism()
+        except Exception:
+            pass
+    except Exception:
+        pass
+
+
 def to_optional_float(value: Any) -> Optional[float]:
     try:
         if value is None:
@@ -440,7 +464,11 @@ def dl_not_run_rows(reason: str, seed: int) -> List[Dict[str, Any]]:
 
 
 def run_dl_cibuild_default(
-    repo_root: Path, seed: int, logger: RunLogger
+    repo_root: Path,
+    seed: int,
+    logger: RunLogger,
+    tuner_option: str = "default",
+    fold_seed_stride: int = 1,
 ) -> List[Dict[str, Any]]:
     dl_repo = repo_root / DEFAULT_DL_CIBUILD_REPO_REL
     scripts_dir = dl_repo / "DL-CIBuild scripts"
@@ -460,6 +488,7 @@ def run_dl_cibuild_default(
     rows: List[Dict[str, Any]] = []
 
     try:
+        set_dl_determinism(seed)
         os.chdir(dl_repo)
         scripts_path = str(scripts_dir.resolve())
         if scripts_path not in sys.path:
@@ -473,8 +502,14 @@ def run_dl_cibuild_default(
         logger.log(
             f"DL-CIBuild online folds loaded: train/test pairs={len(train_sets)} / {len(test_sets)}"
         )
+        logger.log(
+            "DL-CIBuild execution settings: "
+            f"tuner_option={tuner_option}, seed={seed}, fold_seed_stride={fold_seed_stride}"
+        )
 
         for fold_index, (train_set, test_set) in enumerate(zip(train_sets, test_sets), start=1):
+            fold_seed = int(seed + ((fold_index - 1) * max(1, int(fold_seed_stride))))
+            set_dl_determinism(fold_seed)
             row = {
                 "model": "dl_cibuild_default",
                 "fold": fold_index,
@@ -488,12 +523,12 @@ def run_dl_cibuild_default(
                 "precision": None,
                 "recall": None,
                 "train_time_sec": None,
-                "seed": seed,
+                "seed": fold_seed,
             }
 
             try:
                 fold_start = time.perf_counter()
-                entry_train = DLLSTM.evaluate_tuner("default", train_set)
+                entry_train = DLLSTM.evaluate_tuner(tuner_option, train_set)
                 time_step = int(entry_train["params"]["time_step"])
                 x_test, y_test = DLLSTM.test_preprocess(train_set, test_set, time_step)
                 entry_test = DLUtils.predict_lstm(entry_train["model"], x_test, y_test)

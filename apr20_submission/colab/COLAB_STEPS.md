@@ -85,6 +85,27 @@ This mode mirrors the "same tasks, multiple setups, repeated runs" pattern.
 
 To include DL-CIBuild rows in matrix mode, add `dl_cibuild_default` to `--tasks`.
 For faster smoke tests, reduce `--repeats` (for example `--repeats 2`).
+You can control DL repeats independently with:
+- `--dl-repeats <N>` (defaults to `--repeats` when omitted or `<=0`)
+- `--dl-base-seed <S>` (defaults to `--base-seed`)
+- `--dl-tuner default|tpe|ga|pso|bohb|rs` (default is `default`)
+
+Example including DL-CIBuild with separate repeat settings:
+
+```bash
+!python apr20_submission/colab/apr20_matrix_colab.py \
+  --repo-root /content/se_proj \
+  --output-dir /content/drive/MyDrive/se_proj_apr20_matrix_outputs \
+  --experiment-name apr20_full_matrix_with_dl \
+  --tasks majority_class,logistic_regression,dl_cibuild_default \
+  --setups baseline,long_history \
+  --repeats 8 \
+  --base-seed 42 \
+  --dl-repeats 12 \
+  --dl-base-seed 100 \
+  --dl-tuner default \
+  --max-folds 5
+```
 
 ## 5) Verify outputs were created
 
