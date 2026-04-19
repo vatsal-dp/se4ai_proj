@@ -66,6 +66,26 @@ If you want to intentionally skip DL-CIBuild execution:
   --skip-dl-cibuild
 ```
 
+### Optional: run repeated setup variants (matrix mode)
+
+This mode mirrors the "same tasks, multiple setups, repeated runs" pattern.
+
+```bash
+!mkdir -p /content/drive/MyDrive/se_proj_apr20_matrix_outputs
+!python apr20_submission/colab/apr20_matrix_colab.py \
+  --repo-root /content/se_proj \
+  --output-dir /content/drive/MyDrive/se_proj_apr20_matrix_outputs \
+  --experiment-name apr20_logreg_parameter_sensitivity \
+  --tasks majority_class,logistic_regression \
+  --setups baseline,conservative_regularization,expressive_regularization,short_history,long_history \
+  --repeats 8 \
+  --base-seed 42 \
+  --max-folds 5
+```
+
+To include DL-CIBuild rows in matrix mode, add `dl_cibuild_default` to `--tasks`.
+For faster smoke tests, reduce `--repeats` (for example `--repeats 2`).
+
 ## 5) Verify outputs were created
 
 ```bash
@@ -76,6 +96,9 @@ Expected files:
 - `pilot_fold_metrics.csv`
 - `pilot_summary.json`
 - `colab_run_log.txt`
+- `matrix_fold_metrics.csv` (if matrix mode is run)
+- `matrix_summary.json` (if matrix mode is run)
+- `matrix_run_log.txt` (if matrix mode is run)
 
 ## 6) Quick sanity checks in Colab
 

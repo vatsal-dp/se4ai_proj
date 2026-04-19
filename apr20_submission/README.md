@@ -14,6 +14,9 @@ Create these under `apr20_submission/artifacts/`:
 - `pilot_fold_metrics.csv`
 - `pilot_summary.json`
 - `colab_run_log.txt`
+- `matrix_fold_metrics.csv` (optional, from repeated setup matrix)
+- `matrix_summary.json` (optional, from repeated setup matrix)
+- `matrix_run_log.txt` (optional, from repeated setup matrix)
 
 ## Source evidence used from Mar 30 milestone
 

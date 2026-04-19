@@ -296,7 +296,28 @@ def run_majority_baseline(
     }
 
 
-def build_logistic_pipeline(x_train: pd.DataFrame, seed: int) -> Pipeline:
+def normalize_class_weight(
+    class_weight: Optional[str],
+) -> Optional[str]:
+    if class_weight is None:
+        return None
+    normalized = str(class_weight).strip().lower()
+    if normalized in {"", "none", "null"}:
+        return None
+    if normalized == "balanced":
+        return "balanced"
+    raise ValueError(
+        "Unsupported class_weight value. Use one of: none, balanced."
+    )
+
+
+def build_logistic_pipeline(
+    x_train: pd.DataFrame,
+    seed: int,
+    c: float = 1.0,
+    max_iter: int = 1000,
+    class_weight: Optional[str] = None,
+) -> Pipeline:
     numeric_cols = list(x_train.select_dtypes(include=["number", "bool"]).columns)
     categorical_cols = [col for col in x_train.columns if col not in numeric_cols]
 
@@ -327,12 +348,23 @@ def build_logistic_pipeline(x_train: pd.DataFrame, seed: int) -> Pipeline:
         )
 
     preprocessor = ColumnTransformer(transformers=transformers)
-    classifier = LogisticRegression(max_iter=1000, random_state=seed)
+    classifier = LogisticRegression(
+        max_iter=int(max_iter),
+        random_state=seed,
+        C=float(c),
+        class_weight=normalize_class_weight(class_weight),
+    )
     return Pipeline(steps=[("prep", preprocessor), ("clf", classifier)])
 
 
 def run_logistic_baseline(
-    train_df: pd.DataFrame, test_df: pd.DataFrame, seed: int
+    train_df: pd.DataFrame,
+    test_df: pd.DataFrame,
+    seed: int,
+    c: float = 1.0,
+    max_iter: int = 1000,
+    class_weight: Optional[str] = None,
+    decision_threshold: float = 0.5,
 ) -> Dict[str, Any]:
     x_train, y_train = split_xy(train_df)
     x_test, y_test = split_xy(test_df)
@@ -353,13 +385,19 @@ def run_logistic_baseline(
             "train_time_sec": None,
         }
 
-    model = build_logistic_pipeline(x_train, seed)
+    model = build_logistic_pipeline(
+        x_train=x_train,
+        seed=seed,
+        c=c,
+        max_iter=max_iter,
+        class_weight=class_weight,
+    )
     start = time.perf_counter()
     model.fit(x_train, y_train)
     train_time = time.perf_counter() - start
 
     y_score = model.predict_proba(x_test)[:, 1]
-    y_pred = (y_score >= 0.5).astype(int)
+    y_pred = (y_score >= float(decision_threshold)).astype(int)
     metrics = compute_classification_metrics(y_test, y_pred, y_score)
     return {
         "model": "logistic_regression",
