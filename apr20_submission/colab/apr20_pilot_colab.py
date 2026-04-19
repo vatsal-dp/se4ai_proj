@@ -43,6 +43,12 @@ TIMESTAMP_COLUMN = "gh_build_started_at"
 DEFAULT_DATASET_REL = (
     "mar30_submission/reproduction/work/DL-CIBuild/dataset/cloudify.csv"
 )
+DEFAULT_DATASET_CANDIDATE_RELS = [
+    DEFAULT_DATASET_REL,
+    "reproduction/work/DL-CIBuild/dataset/cloudify.csv",
+    "DL-CIBuild/dataset/cloudify.csv",
+    "dataset/cloudify.csv",
+]
 DEFAULT_DL_CIBUILD_REPO_REL = "mar30_submission/reproduction/work/DL-CIBuild"
 DEFAULT_NUM_FOLDS = 5
 DEFAULT_SEED = 42
@@ -168,10 +174,66 @@ def compute_classification_metrics(
     }
 
 
+def _unique_paths(paths: Iterable[Path]) -> List[Path]:
+    seen: set[str] = set()
+    out: List[Path] = []
+    for path in paths:
+        key = str(path)
+        if key in seen:
+            continue
+        seen.add(key)
+        out.append(path)
+    return out
+
+
+def resolve_dataset_path(repo_root: Path, dataset_relpath: str, logger: RunLogger) -> Path:
+    requested = Path(dataset_relpath).expanduser()
+    requested_candidate = requested if requested.is_absolute() else (repo_root / requested)
+
+    candidates: List[Path] = [requested_candidate]
+    for rel in DEFAULT_DATASET_CANDIDATE_RELS:
+        candidates.append(repo_root / rel)
+    candidates = _unique_paths(candidates)
+
+    existing = [path for path in candidates if path.exists() and path.is_file()]
+    if existing:
+        chosen = existing[0]
+        if chosen != requested_candidate:
+            logger.log(
+                "Requested dataset path was missing; auto-resolved cloudify.csv at: "
+                f"{chosen}"
+            )
+        return chosen
+
+    # Final fallback for Colab/local layout drift: search the repo for cloudify.csv.
+    discovered = sorted(
+        [path for path in repo_root.rglob("cloudify.csv") if path.is_file()],
+        key=lambda path: (len(path.parts), str(path)),
+    )
+    if discovered:
+        chosen = discovered[0]
+        logger.log(
+            "Requested dataset path was missing; discovered cloudify.csv by recursive "
+            f"search at: {chosen}"
+        )
+        return chosen
+
+    checked = "\n".join(f"  - {path}" for path in candidates)
+    raise FileNotFoundError(
+        "Dataset not found. Checked the following paths:\n"
+        f"{checked}\n"
+        "Also searched recursively under repo root for 'cloudify.csv' with no match.\n"
+        "Provide an explicit dataset location with:\n"
+        "  --dataset-relpath <relative-or-absolute-path-to-cloudify.csv>"
+    )
+
+
 def load_dataset(repo_root: Path, dataset_relpath: str, logger: RunLogger) -> pd.DataFrame:
-    dataset_path = repo_root / dataset_relpath
-    if not dataset_path.exists():
-        raise FileNotFoundError(f"Dataset not found: {dataset_path}")
+    dataset_path = resolve_dataset_path(
+        repo_root=repo_root,
+        dataset_relpath=dataset_relpath,
+        logger=logger,
+    )
 
     logger.log(f"Loading dataset from: {dataset_path}")
     df = pd.read_csv(dataset_path, parse_dates=[TIMESTAMP_COLUMN])
