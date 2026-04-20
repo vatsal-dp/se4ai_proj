@@ -1,0 +1,145 @@
+2026-04-20T01:18:15.228682+00:00 | Repo root: /content/se_proj
+2026-04-20T01:18:15.228735+00:00 | Output dir: /content/drive/MyDrive/se_proj_apr20_matrix_outputs
+2026-04-20T01:18:15.228769+00:00 | Experiment: apr20_full_matrix_with_dl
+2026-04-20T01:18:15.228791+00:00 | Selected tasks: majority_class, logistic_regression, dl_cibuild_default
+2026-04-20T01:18:15.228813+00:00 | Selected setups: baseline, long_history
+2026-04-20T01:18:15.228833+00:00 | Repeats per setup: 8
+2026-04-20T01:18:15.228847+00:00 | DL repeats per setup: 12 (dl_base_seed=100, dl_tuner=default)
+2026-04-20T01:18:15.228869+00:00 | Shared speed caps: max_folds=5, progress_every=0, runner_heartbeat_sec=120
+2026-04-20T01:18:15.229143+00:00 | Loading dataset from: /content/se_proj/mar30_submission/reproduction/work/DL-CIBuild/dataset/cloudify.csv
+2026-04-20T01:18:15.267482+00:00 | Loaded 5742 rows and 21 columns.
+2026-04-20T01:18:15.270337+00:00 | Using 5 fold(s) with fold_size=574.
+2026-04-20T01:18:15.270415+00:00 | Setup parameters | name=baseline, logreg_c=1.0, logreg_max_iter=1000, logreg_class_weight=none, decision_threshold=0.5, train_fraction=1.0
+2026-04-20T01:18:15.270508+00:00 | Running setup=baseline, repeat=1/8, seed=42
+2026-04-20T01:18:16.480537+00:00 | Completed setup=baseline, repeat=1 in 1.21s
+2026-04-20T01:18:16.480666+00:00 | Running setup=baseline, repeat=2/8, seed=43
+2026-04-20T01:18:18.198742+00:00 | Completed setup=baseline, repeat=2 in 1.72s
+2026-04-20T01:18:18.198889+00:00 | Running setup=baseline, repeat=3/8, seed=44
+2026-04-20T01:18:19.803907+00:00 | Completed setup=baseline, repeat=3 in 1.61s
+2026-04-20T01:18:19.804020+00:00 | Running setup=baseline, repeat=4/8, seed=45
+2026-04-20T01:18:21.007202+00:00 | Completed setup=baseline, repeat=4 in 1.20s
+2026-04-20T01:18:21.019226+00:00 | Running setup=baseline, repeat=5/8, seed=46
+2026-04-20T01:18:21.977631+00:00 | Completed setup=baseline, repeat=5 in 0.96s
+2026-04-20T01:18:21.983191+00:00 | Running setup=baseline, repeat=6/8, seed=47
+2026-04-20T01:18:23.329003+00:00 | Completed setup=baseline, repeat=6 in 1.35s
+2026-04-20T01:18:23.329133+00:00 | Running setup=baseline, repeat=7/8, seed=48
+2026-04-20T01:18:24.821681+00:00 | Completed setup=baseline, repeat=7 in 1.49s
+2026-04-20T01:18:24.831713+00:00 | Running setup=baseline, repeat=8/8, seed=49
+2026-04-20T01:18:27.905888+00:00 | Completed setup=baseline, repeat=8 in 3.07s
+2026-04-20T01:18:27.907811+00:00 | Running setup=baseline, dl_repeat=1/12, seed=100, tuner=default
+2026-04-20T01:18:33.768779+00:00 | DL-CIBuild online folds loaded: train/test pairs=5 / 5
+2026-04-20T01:18:33.768830+00:00 | DL-CIBuild execution settings: tuner_option=default, seed=100, fold_seed_stride=1
+2026-04-20T01:27:19.095228+00:00 | Completed setup=baseline, dl_repeat=1 in 531.19s
+2026-04-20T01:27:19.095294+00:00 | Running setup=baseline, dl_repeat=2/12, seed=101, tuner=default
+2026-04-20T01:27:19.151786+00:00 | DL-CIBuild online folds loaded: train/test pairs=5 / 5
+2026-04-20T01:27:19.151839+00:00 | DL-CIBuild execution settings: tuner_option=default, seed=101, fold_seed_stride=1
+2026-04-20T01:36:12.189910+00:00 | Completed setup=baseline, dl_repeat=2 in 533.09s
+2026-04-20T01:36:12.189993+00:00 | Running setup=baseline, dl_repeat=3/12, seed=102, tuner=default
+2026-04-20T01:36:12.274150+00:00 | DL-CIBuild online folds loaded: train/test pairs=5 / 5
+2026-04-20T01:36:12.274213+00:00 | DL-CIBuild execution settings: tuner_option=default, seed=102, fold_seed_stride=1
+2026-04-20T01:44:42.561785+00:00 | Completed setup=baseline, dl_repeat=3 in 510.37s
+2026-04-20T01:44:42.561847+00:00 | Running setup=baseline, dl_repeat=4/12, seed=103, tuner=default
+2026-04-20T01:44:42.626374+00:00 | DL-CIBuild online folds loaded: train/test pairs=5 / 5
+2026-04-20T01:44:42.626427+00:00 | DL-CIBuild execution settings: tuner_option=default, seed=103, fold_seed_stride=1
+2026-04-20T01:53:01.209507+00:00 | Completed setup=baseline, dl_repeat=4 in 498.65s
+2026-04-20T01:53:01.209572+00:00 | Running setup=baseline, dl_repeat=5/12, seed=104, tuner=default
+2026-04-20T01:53:01.274837+00:00 | DL-CIBuild online folds loaded: train/test pairs=5 / 5
+2026-04-20T01:53:01.274889+00:00 | DL-CIBuild execution settings: tuner_option=default, seed=104, fold_seed_stride=1
+2026-04-20T02:01:47.620897+00:00 | Completed setup=baseline, dl_repeat=5 in 526.41s
+2026-04-20T02:01:47.620978+00:00 | Running setup=baseline, dl_repeat=6/12, seed=105, tuner=default
+2026-04-20T02:01:47.712084+00:00 | DL-CIBuild online folds loaded: train/test pairs=5 / 5
+2026-04-20T02:01:47.712149+00:00 | DL-CIBuild execution settings: tuner_option=default, seed=105, fold_seed_stride=1
+2026-04-20T02:10:25.481622+00:00 | Completed setup=baseline, dl_repeat=6 in 517.86s
+2026-04-20T02:10:25.481696+00:00 | Running setup=baseline, dl_repeat=7/12, seed=106, tuner=default
+2026-04-20T02:10:25.545491+00:00 | DL-CIBuild online folds loaded: train/test pairs=5 / 5
+2026-04-20T02:10:25.545543+00:00 | DL-CIBuild execution settings: tuner_option=default, seed=106, fold_seed_stride=1
+2026-04-20T02:18:50.738565+00:00 | Completed setup=baseline, dl_repeat=7 in 505.26s
+2026-04-20T02:18:50.738631+00:00 | Running setup=baseline, dl_repeat=8/12, seed=107, tuner=default
+2026-04-20T02:18:50.803547+00:00 | DL-CIBuild online folds loaded: train/test pairs=5 / 5
+2026-04-20T02:18:50.803604+00:00 | DL-CIBuild execution settings: tuner_option=default, seed=107, fold_seed_stride=1
+2026-04-20T02:27:50.612333+00:00 | Completed setup=baseline, dl_repeat=8 in 539.87s
+2026-04-20T02:27:50.612415+00:00 | Running setup=baseline, dl_repeat=9/12, seed=108, tuner=default
+2026-04-20T02:27:50.730796+00:00 | DL-CIBuild online folds loaded: train/test pairs=5 / 5
+2026-04-20T02:27:50.730863+00:00 | DL-CIBuild execution settings: tuner_option=default, seed=108, fold_seed_stride=1
+2026-04-20T02:36:37.175142+00:00 | Completed setup=baseline, dl_repeat=9 in 526.56s
+2026-04-20T02:36:37.175211+00:00 | Running setup=baseline, dl_repeat=10/12, seed=109, tuner=default
+2026-04-20T02:36:37.241720+00:00 | DL-CIBuild online folds loaded: train/test pairs=5 / 5
+2026-04-20T02:36:37.241801+00:00 | DL-CIBuild execution settings: tuner_option=default, seed=109, fold_seed_stride=1
+2026-04-20T02:45:23.841421+00:00 | Completed setup=baseline, dl_repeat=10 in 526.67s
+2026-04-20T02:45:23.841489+00:00 | Running setup=baseline, dl_repeat=11/12, seed=110, tuner=default
+2026-04-20T02:45:23.907437+00:00 | DL-CIBuild online folds loaded: train/test pairs=5 / 5
+2026-04-20T02:45:23.907489+00:00 | DL-CIBuild execution settings: tuner_option=default, seed=110, fold_seed_stride=1
+2026-04-20T02:54:17.222213+00:00 | Completed setup=baseline, dl_repeat=11 in 533.38s
+2026-04-20T02:54:17.222286+00:00 | Running setup=baseline, dl_repeat=12/12, seed=111, tuner=default
+2026-04-20T02:54:17.313290+00:00 | DL-CIBuild online folds loaded: train/test pairs=5 / 5
+2026-04-20T02:54:17.313345+00:00 | DL-CIBuild execution settings: tuner_option=default, seed=111, fold_seed_stride=1
+2026-04-20T03:03:28.421634+00:00 | Completed setup=baseline, dl_repeat=12 in 551.20s
+2026-04-20T03:03:28.421723+00:00 | Setup parameters | name=long_history, logreg_c=1.0, logreg_max_iter=2000, logreg_class_weight=balanced, decision_threshold=0.5, train_fraction=1.0
+2026-04-20T03:03:28.421850+00:00 | Running setup=long_history, repeat=1/8, seed=42
+2026-04-20T03:03:28.680580+00:00 | Heartbeat: setup=long_history, repeat=1/8, fold=1/5
+2026-04-20T03:03:29.916576+00:00 | Completed setup=long_history, repeat=1 in 1.49s
+2026-04-20T03:03:29.916705+00:00 | Running setup=long_history, repeat=2/8, seed=43
+2026-04-20T03:03:31.418296+00:00 | Completed setup=long_history, repeat=2 in 1.50s
+2026-04-20T03:03:31.421209+00:00 | Running setup=long_history, repeat=3/8, seed=44
+2026-04-20T03:03:32.618300+00:00 | Completed setup=long_history, repeat=3 in 1.20s
+2026-04-20T03:03:32.618426+00:00 | Running setup=long_history, repeat=4/8, seed=45
+2026-04-20T03:03:34.100687+00:00 | Completed setup=long_history, repeat=4 in 1.48s
+2026-04-20T03:03:34.101837+00:00 | Running setup=long_history, repeat=5/8, seed=46
+2026-04-20T03:03:37.609252+00:00 | Completed setup=long_history, repeat=5 in 3.51s
+2026-04-20T03:03:37.609371+00:00 | Running setup=long_history, repeat=6/8, seed=47
+2026-04-20T03:03:39.108767+00:00 | Completed setup=long_history, repeat=6 in 1.50s
+2026-04-20T03:03:39.108889+00:00 | Running setup=long_history, repeat=7/8, seed=48
+2026-04-20T03:03:40.528475+00:00 | Completed setup=long_history, repeat=7 in 1.42s
+2026-04-20T03:03:40.529841+00:00 | Running setup=long_history, repeat=8/8, seed=49
+2026-04-20T03:03:41.989494+00:00 | Completed setup=long_history, repeat=8 in 1.46s
+2026-04-20T03:03:41.991791+00:00 | Running setup=long_history, dl_repeat=1/12, seed=100, tuner=default
+2026-04-20T03:03:42.094646+00:00 | DL-CIBuild online folds loaded: train/test pairs=5 / 5
+2026-04-20T03:03:42.094710+00:00 | DL-CIBuild execution settings: tuner_option=default, seed=100, fold_seed_stride=1
+2026-04-20T03:12:25.396824+00:00 | Completed setup=long_history, dl_repeat=1 in 523.41s
+2026-04-20T03:12:25.396888+00:00 | Running setup=long_history, dl_repeat=2/12, seed=101, tuner=default
+2026-04-20T03:12:25.489513+00:00 | DL-CIBuild online folds loaded: train/test pairs=5 / 5
+2026-04-20T03:12:25.489570+00:00 | DL-CIBuild execution settings: tuner_option=default, seed=101, fold_seed_stride=1
+2026-04-20T03:21:05.994210+00:00 | Completed setup=long_history, dl_repeat=2 in 520.60s
+2026-04-20T03:21:05.994286+00:00 | Running setup=long_history, dl_repeat=3/12, seed=102, tuner=default
+2026-04-20T03:21:06.087374+00:00 | DL-CIBuild online folds loaded: train/test pairs=5 / 5
+2026-04-20T03:21:06.087441+00:00 | DL-CIBuild execution settings: tuner_option=default, seed=102, fold_seed_stride=1
+2026-04-20T03:30:12.934443+00:00 | Completed setup=long_history, dl_repeat=3 in 546.94s
+2026-04-20T03:30:12.934525+00:00 | Running setup=long_history, dl_repeat=4/12, seed=103, tuner=default
+2026-04-20T03:30:13.031641+00:00 | DL-CIBuild online folds loaded: train/test pairs=5 / 5
+2026-04-20T03:30:13.031709+00:00 | DL-CIBuild execution settings: tuner_option=default, seed=103, fold_seed_stride=1
+2026-04-20T03:39:09.299695+00:00 | Completed setup=long_history, dl_repeat=4 in 536.37s
+2026-04-20T03:39:09.299789+00:00 | Running setup=long_history, dl_repeat=5/12, seed=104, tuner=default
+2026-04-20T03:39:09.407426+00:00 | DL-CIBuild online folds loaded: train/test pairs=5 / 5
+2026-04-20T03:39:09.407492+00:00 | DL-CIBuild execution settings: tuner_option=default, seed=104, fold_seed_stride=1
+2026-04-20T03:47:51.259992+00:00 | Completed setup=long_history, dl_repeat=5 in 521.96s
+2026-04-20T03:47:51.260062+00:00 | Running setup=long_history, dl_repeat=6/12, seed=105, tuner=default
+2026-04-20T03:47:51.333625+00:00 | DL-CIBuild online folds loaded: train/test pairs=5 / 5
+2026-04-20T03:47:51.333678+00:00 | DL-CIBuild execution settings: tuner_option=default, seed=105, fold_seed_stride=1
+2026-04-20T03:56:37.308271+00:00 | Completed setup=long_history, dl_repeat=6 in 526.05s
+2026-04-20T03:56:37.308338+00:00 | Running setup=long_history, dl_repeat=7/12, seed=106, tuner=default
+2026-04-20T03:56:37.439205+00:00 | DL-CIBuild online folds loaded: train/test pairs=5 / 5
+2026-04-20T03:56:37.439267+00:00 | DL-CIBuild execution settings: tuner_option=default, seed=106, fold_seed_stride=1
+2026-04-20T04:05:31.308710+00:00 | Completed setup=long_history, dl_repeat=7 in 534.00s
+2026-04-20T04:05:31.308792+00:00 | Running setup=long_history, dl_repeat=8/12, seed=107, tuner=default
+2026-04-20T04:05:31.388395+00:00 | DL-CIBuild online folds loaded: train/test pairs=5 / 5
+2026-04-20T04:05:31.388457+00:00 | DL-CIBuild execution settings: tuner_option=default, seed=107, fold_seed_stride=1
+2026-04-20T04:13:54.107898+00:00 | Completed setup=long_history, dl_repeat=8 in 502.80s
+2026-04-20T04:13:54.107966+00:00 | Running setup=long_history, dl_repeat=9/12, seed=108, tuner=default
+2026-04-20T04:13:54.179487+00:00 | DL-CIBuild online folds loaded: train/test pairs=5 / 5
+2026-04-20T04:13:54.179540+00:00 | DL-CIBuild execution settings: tuner_option=default, seed=108, fold_seed_stride=1
+2026-04-20T04:22:41.726460+00:00 | Completed setup=long_history, dl_repeat=9 in 527.62s
+2026-04-20T04:22:41.726523+00:00 | Running setup=long_history, dl_repeat=10/12, seed=109, tuner=default
+2026-04-20T04:22:41.799595+00:00 | DL-CIBuild online folds loaded: train/test pairs=5 / 5
+2026-04-20T04:22:41.799649+00:00 | DL-CIBuild execution settings: tuner_option=default, seed=109, fold_seed_stride=1
+2026-04-20T04:31:38.758668+00:00 | Completed setup=long_history, dl_repeat=10 in 537.03s
+2026-04-20T04:31:38.758735+00:00 | Running setup=long_history, dl_repeat=11/12, seed=110, tuner=default
+2026-04-20T04:31:38.839039+00:00 | DL-CIBuild online folds loaded: train/test pairs=5 / 5
+2026-04-20T04:31:38.839091+00:00 | DL-CIBuild execution settings: tuner_option=default, seed=110, fold_seed_stride=1
+2026-04-20T04:40:42.475291+00:00 | Completed setup=long_history, dl_repeat=11 in 543.72s
+2026-04-20T04:40:42.475363+00:00 | Running setup=long_history, dl_repeat=12/12, seed=111, tuner=default
+2026-04-20T04:40:42.559003+00:00 | DL-CIBuild online folds loaded: train/test pairs=5 / 5
+2026-04-20T04:40:42.559057+00:00 | DL-CIBuild execution settings: tuner_option=default, seed=111, fold_seed_stride=1
+2026-04-20T04:49:35.570712+00:00 | Completed setup=long_history, dl_repeat=12 in 533.10s
+2026-04-20T04:49:35.684723+00:00 | Wrote metrics: /content/drive/MyDrive/se_proj_apr20_matrix_outputs/matrix_fold_metrics.csv
+2026-04-20T04:49:35.684793+00:00 | Wrote summary: /content/drive/MyDrive/se_proj_apr20_matrix_outputs/matrix_summary.json
+2026-04-20T04:49:35.684810+00:00 | Matrix run complete.

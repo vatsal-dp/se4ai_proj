@@ -6,6 +6,10 @@ This folder contains the Apr 20 (6a) content draft and its planned artifact map.
 
 - `apr20_working_draft.md`  
   Main Apr 20 writing deliverable (Introduction, Background, Methods) with explicit placeholder slots for pending Colab pilot outputs.
+- `submission_apr20_paper.md`  
+  Submission-ready Apr 20 paper with integrated analysis from matrix outputs.
+- `artifacts/`  
+  Final run artifacts used in the Apr 20 paper, including both `matrix_*` files and `pilot_*` alias copies.
 
 ## Planned artifacts to be added after Colab run
 
